@@ -1,77 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Frontend Mentor | QR code component</title>
+    <title>Frontend Mentor | QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    :root {
-      --White: hsl(0, 0%, 100%);
-      --Light-gray: hsl(212, 45%, 89%);
-      --Grayish-blue: hsl(220, 15%, 55%);
-      --Dark-blue: hsl(218, 44%, 22%);
-    }
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --White: hsl(0, 0%, 100%);
+        --Light-gray: hsl(212, 45%, 89%);
+        --Grayish-blue: hsl(220, 15%, 55%);
+        --Dark-blue: hsl(218, 44%, 22%);
+      }
 
-    body {
-      align-items: center;
-      background-color: var(--Light-gray);
-      color: var(--Grayish-blue);
-      display: flex;
-      flex-direction: column;
-      font-family: "Outfit";
-      font-size: 15px;
-      height: 100vh;
-      justify-content: center;
-      text-align: center;
-    }
+      body {
+        align-items: center;
+        background-color: var(--Light-gray);
+        color: var(--Grayish-blue);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Outfit';
+        font-size: 15px;
+        min-height: 100vh;
+        justify-content: center;
+        text-align: center;
+      }
 
-    .qr-card {
-      background-color: var(--White);
-      border-radius: 20px;
-      display: grid;
-      grid-template-columns: 320px;
-      justify-items: center;
-      padding-top: 16px;
-    }
-    .qr-card img {
-      border-radius: 10px;
-      width: 288px;
-    }
-    .qr-card h1 {
-      color: var(--Dark-blue);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin: 27px 1.5rem 0.5rem 1.5rem;
-    }
-    .qr-card p { margin: 0.5rem 2em 40px 2em; }
+      .qr-card {
+        background-color: var(--White);
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 320px;
+        justify-items: center;
+        padding-top: 16px;
+      }
+      .qr-card img {
+        border-radius: 10px;
+        width: 288px;
+      }
+      .qr-card h1 {
+        color: var(--Dark-blue);
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 27px 1.5rem 0.5rem 1.5rem;
+      }
+      .qr-card p {
+        margin: 0.5rem 2em 40px 2em;
+      }
 
-    .attribution { 
-      bottom: 0;
-      font-size: 11px; text-align: center; 
-      margin: 2rem;
-      position: absolute;
-    }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
+      .attribution {
+        bottom: 0;
+        font-size: 11px;
+        text-align: center;
+        margin: 2rem;
+        position: absolute;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-<body>
-  <article id="qr-card" class="qr-card">
-    <img src="./images/image-qr-code.png" alt="qr code image"/>
-    <h1>Improve your front-end skills by building projects</h1>
-    <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-  </article>
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jonatan Garbuyo</a>.
-  </footer>
-</body>
+  <body>
+    <main>
+      <article id="qr-card" class="qr-card">
+        <img src="./images/image-qr-code.png" alt="qr code image" />
+        <h1>Improve your front-end skills by building projects</h1>
+        <p>
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </article>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jonatan Garbuyo</a>.
+    </footer>
+  </body>
 </html>
