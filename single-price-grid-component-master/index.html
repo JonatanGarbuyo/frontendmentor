@@ -1,50 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Single Price Grid Component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Join our community
+    <title>Frontend Mentor | Single Price Grid Component</title>
 
-  30-day, hassle-free money back guarantee
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --Cyan: hsl(179, 62%, 43%);
+        --Bright_Yellow: hsl(71, 73%, 54%);
+        --Neutral_Light_Gray: hsl(204, 43%, 93%);
+        --Grayish_Blue: hsl(218, 22%, 67%);
+      }
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+      body {
+        align-items: center;
+        background-color: var(--Neutral_Light_Gray);
+        color: var(--Grayish_Blue);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Karla';
+        font-size: 16px;
+        height: 100vh;
+        justify-content: center;
+        text-align: center;
+      }
 
-  Monthly Subscription
+      .pricecard {
+        overflow: hidden;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 635px;
+        background-color: #f9f9f9;
+      }
 
-  &dollar;29 per month
+      .pricecard-header {
+        width: 100%;
+        padding-bottom: 2rem;
+      }
+      .pricecard-header-title {
+        color: var(--Cyan);
+        margin: 40px 2rem 1.5rem 2rem;
+      }
+      .pricecard-header-subtitle {
+        margin: 1rem;
+        margin-left: 2rem;
+        color: var(--Bright_Yellow);
+      }
+      .pricecard-header-description {
+        margin: 0.5rem;
+        margin-left: 2rem;
+      }
 
-  Full access for less than &dollar;1 a day
+      .pricecard-body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: var(--Neutral_Light_Gray);
+        background-color: var(--Cyan);
+      }
 
-  Sign Up
+      .pricecard-body-subscription {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+      }
+      .pricecard-body-subscription-description {
+        display: flex;
+        align-items: center;
+        margin: 0.2rem;
+        margin-left: 2.5rem;
+        gap: 1rem;
+      }
+      .pricecard-body-subscription span {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .pricecard-body-subscription button {
+        font-family: 'Karla';
+        font-size: 16px;
+        width: 237px;
+        height: 48px;
+        background-color: var(--Bright_Yellow);
+        color: #f9f9f9;
+        border-radius: 5px;
+        margin: 2rem 2.5rem;
+        border: none;
+        cursor: pointer;
+      }
+      .pricecard-body-subscription button:hover {
+        position: relative;
+        bottom: 1px;
+        left: 1px;
+      }
+      .pricecard-body-subscription button:active {
+        position: relative;
+        bottom: -1px;
+        left: -1px;
+      }
 
-  Why Us
+      .pricecard-body-whyus {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .pricecard-body-whyus ul {
+        list-style: none;
+        font-size: 14px;
+      }
+      .pricecard-body-whyus li {
+        color: var(--Neutral_Light_Gray);
+        padding: 1px;
+      }
 
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+      .subtitle {
+        font-weight: 400;
+        margin: 2.6rem 2.5rem 1rem 2.5rem;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media (max-width: 640px) {
+        .pricecard {
+          width: 90%;
+        }
+
+        .pricecard-header-title,
+        .pricecard-header-subtitle {
+          margin: 1.5rem;
+        }
+
+        .pricecard-header-description,
+        .pricecard-body-subscription-description {
+          margin: 0.3rem 1.5rem;
+        }
+
+        .pricecard-body {
+          width: 100%;
+          grid-template-columns: 1fr;
+        }
+
+        .pricecard-body-subscription {
+          justify-content: center;
+        }
+
+        .pricecard-body-whyus {
+          display: grid;
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+        .pricecard-body-whyus ul {
+          margin-top: 0;
+        }
+
+        .subtitle {
+          margin: 1rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <article class="pricecard">
+      <header class="pricecard-header">
+        <h1 class="pricecard-header-title">Join our community</h1>
+        <h3 class="pricecard-header-subtitle">
+          30-day, hassle-free money back guarantee
+        </h3>
+        <p class="pricecard-header-description">
+          Gain access to our full library of tutorials along with expert code
+          reviews.
+        </p>
+        <p class="pricecard-header-description">
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </header>
+      <div class="pricecard-body">
+        <div class="pricecard-body-subscription">
+          <h3 class="subtitle">Monthly Subscription</h3>
+
+          <p class="pricecard-body-subscription-description">
+            <span> &dollar;29 </span> per month
+          </p>
+          <p class="pricecard-body-subscription-description">
+            Full access for less than &dollar;1 a day
+          </p>
+          <button>Sign Up</button>
+        </div>
+        <div class="pricecard-body-whyus">
+          <h3 class="subtitle">Why Us</h3>
+          <ul>
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </body>
 </html>
