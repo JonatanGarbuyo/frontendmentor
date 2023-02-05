@@ -1,5 +1,7 @@
 # Frontend Mentor - Single price grid component solution
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a58d7d2e-4e31-421c-8941-c3988e2b33e8/deploy-status)](https://app.netlify.com/sites/frontendmentor-single-price-grid-main/deploys)
+
 This is a solution to the [Single price grid component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
