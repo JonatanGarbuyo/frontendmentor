@@ -1,5 +1,7 @@
 # Frontend Mentor - Huddle landing page with single introductory section solution
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/abe7336c-a025-48a3-ac82-ac0dec2bd963/deploy-status)](https://app.netlify.com/sites/huddle-landing-page-master-fm/deploys)
+
 This is a solution to the [Huddle landing page with single introductory section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -29,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://huddle-landing-page-master-fm.netlify.app/)
 
 ## My process
 
@@ -38,10 +40,8 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Github - [Jonatan Garbuyo](https://github.com/JonatanGarbuyo)
+- Frontend Mentor - [@JonatanGarbuyo](https://www.frontendmentor.io/profile/JonatanGarbuyo)
