@@ -1,0 +1,274 @@
+:root {
+  --Desaturated_Red: hsl(0, 36%, 70%);
+  --Desaturated_Red_ligth: hsl(0, 53%, 77%);
+  --Soft_Red: hsl(0, 93%, 68%);
+  --Dark_Grayish_Red: hsl(0, 6%, 24%);
+  --Body_Gradient: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+  --Button_Gradient: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+  max-width: 1440px;
+  max-height: 800px;
+  min-width: 375px;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  display: grid;
+  grid:
+    'header aside'
+    'main aside'
+    'footer aside';
+  background: no-repeat url('./images/bg-pattern-desktop.svg'),
+    linear-gradient(var(--Body_Gradient));
+  background-size: 830px 788px;
+  color: var(--Desaturated_Red);
+}
+
+header {
+  width: 100%;
+  height: 33px;
+  grid-area: header;
+  margin: 65px 165px;
+}
+aside {
+  grid-area: aside;
+}
+main {
+  padding: 0 165px;
+  grid-area: main;
+}
+form {
+  position: relative;
+  margin: 15px 0;
+  width: 446px;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  padding: 18px 0px;
+  border: none;
+  position: absolute;
+  right: 0;
+  height: 55px;
+  width: 101px;
+  border-radius: 54px;
+  background: linear-gradient(var(--Button_Gradient));
+  box-shadow: hsl(0, 80%, 86%) 0px 14px 28px;
+}
+button:hover {
+  background: hsl(0, 80%, 86%);
+}
+
+footer {
+  grid-area: footer;
+  margin: auto;
+}
+
+.hero-mobile {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+.title {
+  max-width: 500px;
+  text-transform: uppercase;
+  font-size: 64px;
+  letter-spacing: 17px;
+  line-height: 69px;
+  color: var(--Dark_Grayish_Red);
+}
+.title span {
+  color: var(--Desaturated_Red);
+  font-weight: 300;
+  line-height: 69px;
+}
+
+.description {
+  max-width: 500px;
+  line-height: 28px;
+  font-weight: 400;
+  padding: 18px 59px 25px 1px;
+}
+
+#email {
+  height: 56px;
+  width: 100%;
+  border-radius: 56px;
+  padding: 0 30px;
+  border: 1px solid lightgray;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+}
+#email::placeholder {
+  color: lightgray;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+#email:invalid {
+  border: 2px solid var(--Soft_Red);
+}
+#email:invalid ~ .error {
+  display: block;
+  position: absolute;
+}
+
+.error-message {
+  bottom: -24px;
+  left: 32px;
+  display: none;
+  color: var(--Soft_Red);
+  font-size: 13px;
+}
+.error-icon {
+  display: none;
+  position: absolute;
+  right: 118px;
+  top: 17px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* //  Media queries // */
+@media (max-width: 1024px) {
+  body {
+    grid:
+      'header'
+      'aside'
+      'main'
+      'footer';
+    justify-items: center;
+    gap: 24px;
+    max-height: unset;
+    background-size: contain;
+  }
+
+  header {
+    margin: 65px auto;
+  }
+
+  main {
+    padding: 20px 0;
+  }
+  aside {
+    width: 100%;
+  }
+  form {
+    margin: auto;
+    width: 312px;
+  }
+  footer {
+    padding: 32px;
+  }
+
+  .logo {
+    margin: 0 48px;
+  }
+
+  .hero {
+    width: 100%;
+    height: unset;
+  }
+
+  .description {
+    margin: auto;
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    margin: 32px 0 10px 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #email {
+    width: 312px;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    margin: 31px 0 4px 0;
+  }
+  main {
+    margin: 20px 0;
+    margin: 20px 0 0 0;
+  }
+  form {
+    margin: 14px auto;
+    width: 312px;
+    height: 48px;
+  }
+  button {
+    width: 64px;
+    height: 48px;
+    padding: 14px 27px;
+    right: 1px;
+  }
+  footer {
+    padding: unset;
+  }
+
+  .logo {
+    margin: 0 32px;
+    width: 101px;
+    height: 21px;
+  }
+  .hero {
+    display: none;
+  }
+  .hero-mobile {
+    display: block;
+  }
+
+  .title {
+    font-size: 40px;
+    letter-spacing: 11px;
+    line-height: 42px;
+  }
+  .title span {
+    line-height: inherit;
+  }
+  .description {
+    max-width: 360px;
+    padding: 17px 32px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .error-icon {
+    right: 74px;
+    top: 12px;
+  }
+
+  #email {
+    padding: 0 23px;
+  }
+
+  #email::placeholder {
+    font-size: 14px;
+  }
+}
