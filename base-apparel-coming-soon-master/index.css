@@ -113,10 +113,10 @@ footer {
   font-size: 16px;
   font-family: 'Josefin Sans', sans-serif;
 }
-#email:invalid {
+#email:invalid:not(:placeholder-shown) {
   border: 2px solid var(--Soft_Red);
 }
-#email:invalid ~ .error {
+#email:invalid:not(:placeholder-shown) ~ .error {
   display: block;
   position: absolute;
 }
