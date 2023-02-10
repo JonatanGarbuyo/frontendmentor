@@ -54,6 +54,14 @@ form {
   padding: 20px 0;
 }
 
+label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 input {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -90,14 +98,17 @@ button {
   padding: 16px;
   cursor: pointer;
 }
-button:hover {
+button:active {
   background-color: #77e2b4;
+}
+button:hover {
+  position: relative;
+  bottom: 1px;
 }
 
 small {
   font-size: 11px;
   color: var(--Grayish_Blue);
-
   position: relative;
   top: -4px;
 }
@@ -159,16 +170,12 @@ footer {
   font-weight: 600;
 }
 
-label {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .hidden-error {
   display: none;
+}
+.error {
+  border: 2px solid var(--Red);
+  color: var(--Red);
 }
 .error-msg {
   color: var(--Red);
@@ -188,9 +195,6 @@ label {
   border: 2px solid var(--Red);
   color: var(--Red);
 }
-/* input:invalid:not(:placeholder-shown) ~ .error {
-  display: block;
-} */
 
 .attribution {
   font-size: 11px;
@@ -206,45 +210,54 @@ label {
     position: static;
     margin: 32px auto;
   }
+
   .hero {
     margin-top: 56px;
     text-align: center;
   }
+
   .form-container {
     width: 100%;
     align-items: center;
   }
 }
 
-@media (max-width: 1024px) {
-}
-
 @media (max-width: 600px) {
   body {
     background-image: url(./images/bg-intro-mobile.png);
   }
+
   main {
     gap: 36px;
+    align-content: flex-start;
   }
+
   form,
-  label,
   input,
   button {
     width: 90%;
   }
+  label {
+    align-items: center;
+    width: 90%;
+  }
+
   small {
     width: 90%;
     text-align: center;
     padding: 0px 28px;
   }
+
   .hero {
     gap: 32px;
     padding: 24px;
   }
+
   .title {
     font-size: 27px;
     line-height: 36px;
   }
+
   .tryitfree {
     width: 90%;
     height: auto;
@@ -252,19 +265,3 @@ label {
     padding: 21px 56px;
   }
 }
-
-/* 
-.box h2 {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.box h2::after {
-    animation: cursor-blink 1.5s steps(2) infinite;
-}
-@keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-}
-*/
