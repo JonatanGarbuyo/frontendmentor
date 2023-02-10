@@ -9,27 +9,30 @@ addEventListener('DOMContentLoaded', () => {
 
 function validate(event) {
   const element = event.target
+  const input = element.parentElement.children[0]
+  const message = element.parentElement.children['err-msg']
+  const icon = element.parentElement.children['err-icon']
 
   if (isEmpty(element) && element.type !== 'email') {
-    element.parentElement.children[0].classList.add('error')
-    element.parentElement.children['err-icon'].classList.remove('hidden-error')
-    element.parentElement.children['err-msg'].classList.remove('hidden-error')
+    input.classList.add('error')
+    icon.classList.remove('hidden-error')
+    message.classList.remove('hidden-error')
   }
   if (!isEmpty(element) && element.type !== 'email') {
-    element.parentElement.children[0].classList.remove('error')
-    element.parentElement.children['err-icon'].classList.add('hidden-error')
-    element.parentElement.children['err-msg'].classList.add('hidden-error')
+    input.classList.remove('error')
+    icon.classList.add('hidden-error')
+    message.classList.add('hidden-error')
   }
 
   if (!validEmail(element) && element.type == 'email') {
-    element.parentElement.children[0].classList.add('error')
-    element.parentElement.children['err-icon'].classList.remove('hidden-error')
-    element.parentElement.children['err-msg'].classList.remove('hidden-error')
+    message.classList.remove('hidden-error')
+    input.classList.add('error')
+    icon.classList.remove('hidden-error')
   }
   if (validEmail(element) && element.type == 'email') {
-    element.parentElement.children[0].classList.remove('error')
-    element.parentElement.children['err-icon'].classList.add('hidden-error')
-    element.parentElement.children['err-msg'].classList.add('hidden-error')
+    input.classList.remove('error')
+    icon.classList.add('hidden-error')
+    message.classList.add('hidden-error')
   }
 }
 
