@@ -10,8 +10,8 @@ addEventListener('DOMContentLoaded', () => {
 function validate(event) {
   const element = event.target
   const input = element.parentElement.children[0]
-  const message = element.parentElement.children['err-msg']
-  const icon = element.parentElement.children['err-icon']
+  const icon = element.parentElement.children[1]
+  const message = element.parentElement.children[2]
 
   if (isEmpty(element) && element.type !== 'email') {
     input.classList.add('error')
