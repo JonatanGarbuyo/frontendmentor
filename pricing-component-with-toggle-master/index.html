@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js"></script>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <header>
+      <h1>Our Pricing</h1>
+      <div class="switch-container">
+        <p>Annually</p>
+        <label class="switch">
+          <input id="slider" type="checkbox" aria-label="switch" />
+          <span class="slider round"></span>
+        </label>
+        <p>Monthly</p>
+      </div>
+    </header>
+
+    <main>
+      <price-card class="card left">
+        <b>Basic</b>
+        <p class="subscription">&dollar;<span class="price">19.99</span></p>
+        <p class="subscription visible">
+          &dollar;<span class="price">199.99</span>
+        </p>
+        <p>500 GB Storage</p>
+        <p>2 Users Allowed</p>
+        <p>Send up to 3 GB</p>
+        <div class="more"><a href="#">Learn More</a></div>
+      </price-card>
+      <price-card class="card professional">
+        <b>Professional</b>
+        <p class="subscription">&dollar;<span class="price">24.99</span></p>
+        <p class="subscription visible">
+          &dollar;<span class="price">249.99</span>
+        </p>
+        <p>1 TB Storage</p>
+        <p>5 Users Allowed</p>
+        <p>Send up to 10 GB</p>
+        <div class="more"><a href="#">Learn More</a></div>
+      </price-card>
+      <price-card class="card right">
+        <b>Master</b>
+        <p class="subscription">&dollar;<span class="price">39.99</span></p>
+        <p class="subscription visible">
+          &dollar;<span class="price">399.99</span>
+        </p>
+        <p>2 TB Storage</p>
+        <p>10 Users Allowed</p>
+        <p>Send up to 20 GB</p>
+        <div class="more"><a href="#">Learn More</a></div>
+      </price-card>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jonatan Garbuyok</a>.
+    </footer>
+  </body>
+</html>
