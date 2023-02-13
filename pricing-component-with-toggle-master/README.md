@@ -1,5 +1,7 @@
 # Frontend Mentor - Pricing component with toggle solution
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/548835a3-80e3-4295-af45-df75ffe56576/deploy-status)](https://app.netlify.com/sites/pricing-component-with-toggle-f/deploys)
+
 This is a solution to the [Pricing component with toggle challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
