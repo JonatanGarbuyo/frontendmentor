@@ -1,0 +1,255 @@
+:root {
+  --Linear_Gradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+  --Very_Light_Grayish_Blue: hsl(240, 78%, 98%);
+  --Light_Grayish_Blue: hsl(234, 14%, 74%);
+  --Grayish_Blue: hsl(233, 13%, 49%);
+  --Dark_Grayish_Blue: hsl(232, 13%, 33%);
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: var(--Very_Light_Grayish_Blue);
+  background-image: url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+  background-position: right top, left bottom;
+  background-repeat: no-repeat;
+  color: var(--Grayish_Blue);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 8px;
+  width: 100%;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 42px;
+}
+
+header h1 {
+  font-size: xx-large;
+}
+header p {
+  color: var(--Light_Grayish_Blue);
+}
+
+main {
+  align-items: center;
+  display: flex;
+  padding: 4px;
+}
+
+.card {
+  background-color: #fafafa;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 453px;
+  padding: 32px;
+  text-align: center;
+  width: 350px;
+}
+.left {
+  border-radius: 10px 0 0 10px;
+}
+.right {
+  border-radius: 0 10px 10px 0;
+}
+.card p {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 17px 0;
+}
+.card b {
+  display: block;
+  font-size: 19px;
+}
+
+.subscription {
+  align-items: center;
+  color: var(--Dark_Grayish_Blue);
+  display: none;
+  font-size: 40px;
+  gap: 8px;
+  justify-content: center;
+}
+.visible {
+  display: flex;
+}
+.price {
+  font-size: 70px;
+  padding-top: 2px;
+  padding-bottom: 8px;
+}
+
+.more {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  height: 44px;
+  margin: 29px auto;
+  overflow: hidden;
+  width: 288px;
+}
+.more a {
+  background-image: linear-gradient(135deg, var(--Linear_Gradient));
+  color: #fcfcff;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.more:hover {
+  border: 1px solid var(--Dark_Grayish_Blue);
+}
+.more:hover > a {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* profesional card */
+.professional {
+  background-image: linear-gradient(135deg, var(--Linear_Gradient));
+  border-radius: 10px;
+  color: #fafafa;
+  height: 501px;
+  padding: 55px 32px;
+}
+.professional p {
+  border-color: hsl(236, 72%, 79%);
+}
+.professional > .subscription {
+  color: white;
+}
+.professional .more:hover {
+  background: none;
+  border-color: #fcfcff;
+}
+.professional .more:hover > a {
+  -webkit-background-clip: revert;
+  background-clip: revert;
+  background-image: none;
+  background: transparent;
+  color: #fcfcff;
+}
+.professional a {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: right;
+  background-size: 501px 350px;
+  color: transparent;
+}
+
+/* The switch */
+.switch-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  width: 56px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+/* The slider */
+.slider {
+  -webkit-transition: 0.4s;
+  background-image: linear-gradient(90deg, var(--Linear_Gradient));
+  border-radius: 34px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:hover {
+  -webkit-filter: opacity(0.5);
+  filter: opacity(0.5);
+}
+.slider:before {
+  -webkit-transition: 0.4s;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 4px;
+  content: '';
+  height: 24px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 24px;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.attribution {
+  font-size: 11px;
+  margin: 32px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*  media queries */
+
+@media (max-width: 1200px) {
+  body {
+    margin: 0;
+  }
+  .more {
+    width: 269px;
+  }
+  .card {
+    width: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .price {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background-position: 182px -32px, left bottom;
+  }
+}
