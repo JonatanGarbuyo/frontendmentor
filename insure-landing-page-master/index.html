@@ -1,85 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="description" content="Author: Jonatan Garbuyo" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Insure landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Frontend Mentor | Insure landing page</title>
+  </head>
+  <body>
+    <header>
+      <div class="navigation-mobile-header">
+        <img src="./images/logo.svg" alt="logo" width="112" height="18" />
+        <button class="icon-hamburger">
+          <img
+            class="icon"
+            src="./images/icon-hamburger.svg"
+            alt="logo"
+            width="32"
+            height="32"
+          />
+        </button>
+        <nav class="navigation-mobile">
+          <div class="navigation-mobile-header">
+            <img src="./images/logo.svg" alt="logo" width="112" height="18" />
+            <button class="icon-close">
+              <img
+                src="./images/icon-close.svg"
+                alt="logo"
+                width="32"
+                height="32"
+              />
+            </button>
+          </div>
+          <ul class="navigation-mobile-links">
+            <li><a href="#" class="link">How we work</a></li>
+            <li><a href="#" class="link">Blog</a></li>
+            <li><a href="#" class="link">Account</a></li>
+            <li>
+              <a href="#" class="link plans"
+                ><span class="button">View plans</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- 
+    <main>
+      <div class="hero heading">
+        <div class="hero-line"></div>
+        <h1 class="hero-title">Humanizing your insurance.</h1>
+        <p class="hero-text">
+          Get your life insurance coverage easier and faster. We blend our
+          expertise and technology to help you find the plan that’s right for
+          you. Ensure you and your loved ones are protected.
+        </p>
+        <div>View plans</div>
+      </div>
+      <img class="intro " src="./images/image-intro-mobile.jpg" alt="intro" height="650" width="540"/>
+      <img class="intro visible" src="./images/image-intro-desktop.jpg" alt="intro" height="650" width="540"/>
+    </main>
 
-  How we work
-  Blog
-  Account
-  View plans
+    <section class="diferent">
+      <h2>We’re different</h2>
+      <div class="card">
+        <img src="./images/icon-snappy-process.svg" alt="logo" />
 
-  Humanizing your insurance.
+        <h3>Snappy Process</h3>
+        <p>
+          Our application process can be completed in minutes, not hours. Don’t
+          get stuck filling in tedious forms.
+        </p>
+      </div>
+      <div class="card">
+        <img src="./images/icon-affordable-prices.svg" alt="logo" />
 
-  Get your life insurance coverage easier and faster. We blend our expertise 
-  and technology to help you find the plan that’s right for you. Ensure you 
-  and your loved ones are protected.
+        <h3>Affordable Prices</h3>
+        <p>
+          We don’t want you worrying about high monthly costs. Our prices may be
+          low, but we still offer the best coverage possible.
+        </p>
+      </div>
+      <div class="card">
+        <img src="./images/icon-people-first.svg" alt="logo" />
 
-  View plans
+        <h3>People First</h3>
+        <p>
+          Our plans aren’t full of conditions and clauses to prevent payouts. We
+          make sure you’re covered when you need it.
+        </p>
+      </div>
+    </section>
+    <div class="more">
+      Find out more about how we work
+      <div>How we work</div>
+    </div>
+    <footer>
+      <div class="social">
+        <img src="./images/logo.svg" alt="logo" />
+        <div class="icons">
+          <a class="social-icon" href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a class="social-icon" href="#" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="social-icon" href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="links">
+          <h2>Our company</h2>
 
-  We’re different
+          <a>How we work</a>
+          <a>Why Insure?</a>
+          <a> View plans</a>
+          <a> Reviews</a>
+        </div>
+        <div>
+          <h2>Help me</h2>
 
-  Snappy Process
+          <a>FAQ</a>
+          <a>Terms of use</a>
+          <a>Privacy policy</a>
+          <a>Cookies</a>
+        </div>
+        <div>
+          <h2>Contact</h2>
 
-  Our application process can be completed in minutes, not hours. Don’t get 
-  stuck filling in tedious forms.
+          <a>Sales</a>
+          <a>Support</a>
+          <a>Live chat</a>
+        </div>
+        <div>
+          <h2>Others</h2>
 
-  Affordable Prices
+          <a>Careers</a>
+          <a>Press</a>
+          <a>Licenses</a>
+        </div>
+      </div>
+    </footer>
 
-  We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible.
-
-  People First
-
-  Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it.
-
-  Find out more about how we work
-
-  How we work
-
-  Our company
-
-  How we work
-  Why Insure?
-  View plans
-  Reviews
-
-  Help me
-
-  FAQ
-  Terms of use
-  Privacy policy
-  Cookies
-
-  Contact
-
-  Sales
-  Support
-  Live chat
-
-  Others
-
-  Careers
-  Press
-  Licenses
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>

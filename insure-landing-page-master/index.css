@@ -1,0 +1,132 @@
+:root {
+  --Dark_Violet: hsl(256, 26%, 20%);
+  --Grayish_Blue: hsl(216, 30%, 68%);
+  --Very_Dark_Violet: hsl(270, 9%, 17%);
+  --Dark_Grayish_Violet: hsl(273, 4%, 51%);
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: var(--Very_Dark_Violet);
+}
+
+header {
+  color: var(--Dark_Grayish_Violet);
+  text-transform: uppercase;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.button {
+  /* width: 142px; */
+  /* height: 36px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 54px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.navigation-mobile {
+  position: absolute;
+  left: 150vw;
+  top: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  transition: left 0.5s ease;
+}
+.navigation-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 80px;
+  background-color: #fff;
+}
+.navigation-mobile-links {
+  background-image: url('./images/bg-pattern-mobile-nav.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  padding: 24px;
+  width: 100%;
+  background-color: var(--Very_Dark_Violet);
+}
+.link {
+  color: white;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 8px;
+}
+.plans {
+  margin-top: 16px;
+}
+.icon-hamburger,
+.icon-close {
+  height: 80px;
+  width: 80px;
+  background: none;
+}
+.icon-hamburger:focus ~ .navigation-mobile {
+  left: 0;
+}
+
+/**/
+
+.heading {
+  font-family: 'DM Serif Display', serif;
+}
+
+.hero-line {
+  width: 150px;
+  border: 1px solid white;
+}
+.hero-title {
+  font-size: 72px;
+}
+.hero-text {
+  font-size: 14px;
+}
+.intro {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
