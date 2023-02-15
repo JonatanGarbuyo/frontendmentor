@@ -84,6 +84,7 @@ footer {
   background-color: var(--Very_Dark_Violet);
 }
 .link {
+  z-index: 1;
   color: white;
   height: 56px;
   display: flex;
@@ -109,10 +110,24 @@ nav .link {
   font-size: 21px;
   margin-top: 16px;
 }
+nav .link:hover {
+  color: var(--Very_Dark_Violet);
+}
 nav .button {
   width: 325px;
   height: 54px;
   font-size: 21px;
+}
+nav .button:hover {
+  background: var(--Very_Dark_Violet);
+  color: white;
+}
+
+.link:hover {
+}
+.button:hover {
+  background: white;
+  color: var(--Very_Dark_Violet);
 }
 
 /*  main content */
