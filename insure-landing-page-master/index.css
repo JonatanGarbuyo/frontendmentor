@@ -59,6 +59,7 @@ footer {
   background-color: #fff;
 }
 .navigation {
+  z-index: 5;
   position: absolute;
   left: 0;
   right: 0;
@@ -115,6 +116,16 @@ nav .button {
 }
 
 /*  main content */
+.intro-background {
+  background-image: url('./images/bg-pattern-intro-left-desktop.svg'),
+    url('./images/bg-pattern-intro-right-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom, right -77px;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  display: none;
+}
 .intro-mobile {
   width: 100%;
   object-fit: cover;
@@ -151,7 +162,11 @@ nav .button {
   flex-direction: column;
   justify-content: center;
 }
-
+.intro-line {
+  display: none;
+  width: 150px;
+  border: 1px solid white;
+}
 .hero-title {
   font-size: 47px;
   line-height: 46px;
@@ -340,16 +355,15 @@ main .plans {
     color: var(--Dark_Grayish_Violet);
     font-size: 14px;
     font-weight: bold;
-    margin-top: 16px;
+    margin-top: 0;
   }
   nav .button {
     width: 144px;
     height: 38px;
-    font-size: 21px;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--Dark_Violet);
     background-color: transparent;
-    border: 1px solid var(--Dark_Violet);
+    border: 2px solid var(--Dark_Violet);
   }
 
   .icon-close,
@@ -362,16 +376,21 @@ main .plans {
   }
   .navigation-mobile-links {
     margin-right: 24px;
-    gap: 27px;
+    gap: 32px;
     background: none;
     display: flex;
     padding: 0;
+    margin-top: 0;
+    align-items: center;
   }
 
   .more {
     width: calc(100vw - 330px);
+    background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
   }
-
+  footer {
+    background-image: url('./images/bg-pattern-footer-desktop.svg');
+  }
   .social {
     justify-content: space-between;
     margin: auto 165px;
@@ -390,13 +409,111 @@ main .plans {
 }
 
 @media (min-width: 1200px) {
+  header {
+    margin: 0 165px;
+  }
+  .navigation-mobile-header {
+    padding: 0;
+  }
+  .navigation-mobile-links {
+    justify-content: flex-end;
+  }
+
+  .hero {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: left, right top;
+  }
+  .intro-background {
+    display: block;
+  }
+  .intro-line {
+    display: block;
+    margin: 40px 0;
+  }
   .intro-desktop {
     position: absolute;
+    object-fit: scale-down;
     right: 165px;
-    width: revert;
-    object-fit: revert;
+    top: 185px;
+    width: calc(100vw / 2.66);
   }
   .intro::before {
     top: 80px;
+    height: 600px;
+  }
+  .intro {
+    width: 497px;
+    padding: 40px 24px;
+    text-align: left;
+    padding-left: 165px;
+  }
+
+  .hero-title {
+    font-size: 72px;
+    line-height: 66px;
+  }
+  .hero-text {
+    text-align: left;
+    padding: 24px 16px;
+  }
+  .link {
+    align-items: flex-start;
+  }
+  main .plans {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro {
+    width: 50%;
+    justify-content: unset;
+    height: 100vh;
+  }
+  .intro-line {
+    margin: 64px 0;
+  }
+  .diferent {
+    margin-top: 12px;
+    text-align: left;
+  }
+  .diferent-line {
+    align-self: flex-start;
+    margin: 16px;
+    margin-left: 165px;
+  }
+  .diferent-title {
+    align-self: flex-start;
+    margin-left: 165px;
+    font-size: 70px;
+  }
+  .card-list {
+    margin: 20px 0;
+  }
+  .card {
+    padding-left: 12px;
+    align-items: flex-start;
+  }
+  .card-text {
+    text-align: left;
+  }
+  .card-image {
+    margin-left: 0;
+  }
+  .more {
+    margin-top: 96px;
+  }
+  .more-title {
+    max-width: 45%;
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  footer {
+    margin-top: 120px;
+  }
+  .social {
+    margin-top: 30px;
   }
 }
