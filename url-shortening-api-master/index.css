@@ -1,4 +1,6 @@
 :root {
+  /* Your browser (Samsung Internet) may not show this website correctly.  */
+  color-scheme: light only;
   /* Primary */
   --Cyan: hsl(180, 66%, 49%);
   --Dark_Violet: hsl(257, 27%, 26%);
@@ -117,7 +119,6 @@ nav a {
 .hero::before {
   display: block;
   content: '';
-  /* width: 500px; */
   height: 329px;
   background-image: url(./images/illustration-working.svg);
   background-position: 22px;
@@ -144,7 +145,6 @@ nav a {
 /* */
 .form {
   width: 327px;
-  /* height: 182px; */
   margin: 70px auto;
   background-color: var(--Dark_Violet);
   background-image: url(./images/bg-shorten-mobile.svg);
@@ -238,7 +238,6 @@ nav a {
 }
 
 /* footer */
-
 footer {
   padding: 52px 0;
   background-color: var(--Very_Dark_Violet);
@@ -258,7 +257,6 @@ footer {
 .footer-item-list {
   padding: 3px;
 }
-
 .footer-item-link {
   color: var(--Gray);
   font-size: 15px;
@@ -279,5 +277,5 @@ footer {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--Cyan);
 }
