@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <meta name="Description" content="Author: Jonatan Garbuyo" />
-    <!-- Your browser (Samsung Internet) may not show this website correctly. -->
-
-    <meta name="color-scheme" content="light only" />
 
     <link rel="stylesheet" href="./index.css" />
     <link
@@ -73,7 +70,7 @@
 
         <button class="button started hero-button">Get Started</button>
       </section>
-      <section>
+      <section class="short-it">
         <form class="form" action="#">
           <input
             class="input email"
@@ -83,6 +80,7 @@
             aria-label="Shorten a link here..."
             placeholder="Shorten a link here..."
           />
+          <p class="error-message">Please add a link</p>
           <input
             class="input button"
             type="submit"
@@ -91,7 +89,17 @@
             value="Shorten It!"
           />
         </form>
-        <div class="link-list"></div>
+        <div class="link-list">
+          <!-- <div class="card-link">
+            <p class="url">https://www.frontendmentor.io</p>
+            <p class="short-url">https://rel.ink/k4lKyk</p>
+            <div>
+              <button class="input button copy" value="https://rel.ink/k4lKyk">
+                Copy
+              </button>
+            </div>
+          </div> -->
+        </div>
         <h1 class="advanced-title">Advanced Statistics</h1>
         <p class="advanced-text">
           Track how your links are performing across the web with our advanced

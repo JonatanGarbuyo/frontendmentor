@@ -28,7 +28,7 @@ body {
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  background-color: #f0f1f5;
+  /* background-color: #f0f1f5; */
 }
 
 header {
@@ -59,9 +59,11 @@ nav ul {
   padding: 38px 24px;
   font-weight: bold;
 }
+
 hr {
   border: 1px solid #544a6d;
 }
+
 nav a {
   height: 20px;
   color: white;
@@ -81,6 +83,14 @@ nav a {
   border: none;
   font-size: 19px;
   font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.7;
+}
+.button:active {
+  /* box-shadow: 0 1px #666; */
+  transform: translateY(2px);
 }
 
 .started {
@@ -142,16 +152,23 @@ nav a {
   margin: 17px;
 }
 
-/* */
+/* FORM */
+.short-it {
+  margin-top: 150px;
+  background-color: #f0f1f5;
+}
 .form {
+  position: relative;
   width: 327px;
-  margin: 70px auto;
+  margin: auto;
+  margin-top: 70px;
   background-color: var(--Dark_Violet);
   background-image: url(./images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
   border-radius: 10px;
   padding: 16px;
+  top: -80px;
 }
 .input {
   padding: 0 16px;
@@ -168,6 +185,56 @@ nav a {
   color: var(--Gray);
 }
 
+.error-message {
+  padding: 0px 8px;
+  color: var(--Red);
+  text-align: left;
+  font-size: 12px;
+  display: none;
+}
+
+.invalid {
+  border: 2px solid var(--Red);
+}
+.invalid::placeholder {
+  color: var(--Red);
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  width: 327px;
+  margin: auto;
+  text-align: left;
+  font-size: 16px;
+}
+.url {
+  align-self: flex-start;
+  width: 100%;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.short-url {
+  align-self: flex-start;
+  padding: 12px 16px 0px 16px;
+  color: var(--Cyan);
+  width: 100%;
+}
+.copy {
+  margin: 16px 0;
+  width: 293px;
+  font-size: 15px;
+  height: 38px;
+}
+
 .advanced-title {
   padding: 18px 0;
   color: var(--Very_Dark_Blue);
@@ -181,7 +248,8 @@ nav a {
 }
 
 .card-list {
-  margin: 50px auto;
+  margin-top: 50px;
+  padding-bottom: 1px;
 }
 .card-list::before {
   margin: auto;
@@ -269,6 +337,7 @@ footer {
   justify-content: center;
   margin: 42px;
 }
+
 /* */
 .attribution {
   /* position: absolute; */
