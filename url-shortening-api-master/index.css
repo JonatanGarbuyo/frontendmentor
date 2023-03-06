@@ -222,6 +222,8 @@ nav a {
   width: 100%;
   padding: 10px 16px;
   border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .short-url {
   align-self: flex-start;
