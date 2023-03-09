@@ -51,12 +51,12 @@ document.querySelector('.form').addEventListener('submit', async (e) => {
 
 function prependCard(data) {
   if (!data) return
-  const { short_link, original_link } = data
+  const { full_short_link, original_link } = data
   const cardHTML = `
     <p class="url">${original_link}</p>
-    <p class="short-url">${short_link}</p>
+    <p class="short-url">${full_short_link}</p>
     <div>
-      <button class="input button copy" value="${short_link}"
+      <button class="input button copy" value="${full_short_link}"
       onclick="copyToClipboard(event)">
         Copy
       </button>
