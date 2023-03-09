@@ -419,6 +419,9 @@ footer {
     border: none;
     flex-grow: 1;
   }
+  .hr-container {
+    flex-grow: 1;
+  }
   nav a {
     color: var(--Grayish_Violet);
   }
