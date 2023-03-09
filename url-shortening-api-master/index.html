@@ -62,13 +62,26 @@
 
     <main>
       <section class="hero">
-        <h1 class="hero-title">More than just shorter links</h1>
-        <p class="hero-text">
-          Build your brand’s recognition and get detailed insights on how your
-          links are performing.
-        </p>
-
-        <button class="button started hero-button">Get Started</button>
+        <div class="img-container">
+          <img
+            class="hero-img"
+            src="./images/illustration-working.svg"
+            alt="working"
+            height="329"
+            width="500"
+          />
+        </div>
+        <div class="container">
+          <h1 class="hero-title">
+            More than just <br />
+            shorter links
+          </h1>
+          <p class="hero-text">
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <button class="button started hero-button">Get Started</button>
+        </div>
       </section>
       <section class="short-it">
         <form class="form" action="#">
@@ -151,94 +164,123 @@
     </main>
 
     <footer>
-      <img
-        class="footer-logo"
-        src="./images/logo-white.svg"
-        alt="logo"
-        width="121"
-        height="33"
-      />
-      <div class="footer-item">
-        <h3 class="footer-item-title">Features</h3>
-        <ul>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#link-shortening"
-              >Link Shortening</a
-            >
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#branded-links">Branded Links</a>
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#analytics">Analytics</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-item">
-        <h3 class="footer-item-title">Resources</h3>
-        <ul>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#blog">Blog</a>
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#developers">Developers</a>
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#support">Support</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-item">
-        <h3 class="footer-item-title">Company</h3>
-        <ul>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#about">About</a>
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#our-team">Our Team</a>
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#careers">Careers</a>
-          </li>
-          <li class="footer-item-list">
-            <a class="footer-item-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="social-icons">
-        <img
-          src="./images/icon-facebook.svg"
-          alt="facebook"
-          width="24"
-          height="24"
-        />
-        <img
-          src="./images/icon-twitter.svg"
-          alt="twitter"
-          width="24"
-          height="20"
-        />
-        <img
-          src="./images/icon-pinterest.svg"
-          alt="pinterest"
-          width="24"
-          height="24"
-        />
-        <img
-          src="./images/icon-instagram.svg"
-          alt="instagram"
-          width="24"
-          height="24"
-        />
-      </div>
-
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Jonatan Garbuyo</a>.
+      <div class="footer-container">
+        <div class="footer-img-container">
+          <img
+            class="footer-logo"
+            src="./images/logo-white.svg"
+            alt="logo"
+            width="121"
+            height="33"
+          />
+        </div>
+        <div class="site-map">
+          <div class="footer-item">
+            <h3 class="footer-item-title">Features</h3>
+            <ul>
+              <li class="footer-item-list">
+                <a
+                  aria-label="Link Shortening"
+                  class="footer-item-link"
+                  href="#link-shortening"
+                  >Link Shortening</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a
+                  aria-label="Branded Links"
+                  class="footer-item-link"
+                  href="#branded-links"
+                  >Branded Links</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a
+                  aria-label="Analytics"
+                  class="footer-item-link"
+                  href="#analytics"
+                  >Analytics</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item-title">Resources</h3>
+            <ul>
+              <li class="footer-item-list">
+                <a aria-label="Blog" class="footer-item-link" href="#blog"
+                  >Blog</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a
+                  aria-label="Developers"
+                  class="footer-item-link"
+                  href="#developers"
+                  >Developers</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a aria-label="Support" class="footer-item-link" href="#support"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item-title">Company</h3>
+            <ul>
+              <li class="footer-item-list">
+                <a aria-label="About" class="footer-item-link" href="#about"
+                  >About</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a
+                  aria-label="Our Team"
+                  class="footer-item-link"
+                  href="#our-team"
+                  >Our Team</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a aria-label="Careers" class="footer-item-link" href="#careers"
+                  >Careers</a
+                >
+              </li>
+              <li class="footer-item-list">
+                <a aria-label="Contact" class="footer-item-link" href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a target="_blank" href="https://facebook.com" aria-label="facebook">
+            <i class="icon facebook" alt="facebook"></i> </a
+          ><a target="_blank" href="https://twitter.com" aria-label="twitter">
+            <i class="icon twitter" alt="twitter"></i> </a
+          ><a
+            target="_blank"
+            href="https://pinterest.com"
+            aria-label="pinterest"
+          >
+            <i class="icon pinterest" alt="pinterest"></i> </a
+          ><a
+            target="_blank"
+            href="https://instagram.com"
+            aria-label="instagram"
+          >
+            <i class="icon instagram" alt="instagram"></i>
+          </a>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Jonatan Garbuyo</a>.
+        </div>
       </div>
     </footer>
   </body>
