@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 inputElement.addEventListener('blur', (event) => {
   if (!event.target.value) {
-    displayInvalid(false)
+    displayInvalid(true)
   }
 })
 
 inputElement.addEventListener('input', (event) => {
   if (event.target.validity.valid) {
-    displayInvalid(true)
+    displayInvalid(false)
   }
 })
 
@@ -100,13 +100,13 @@ function copyToClipboard(event) {
   }, 1000)
 }
 
-function displayInvalid(valid) {
+function displayInvalid(bool) {
   const errorMessage = document.querySelector('.error-message')
-  if (valid) {
-    inputElement.classList.remove('invalid')
-    errorMessage.setAttribute('style', 'display: none;')
-  } else {
+  if (bool) {
     inputElement.classList.add('invalid')
     errorMessage.setAttribute('style', 'display: block;')
+  } else {
+    inputElement.classList.remove('invalid')
+    errorMessage.setAttribute('style', 'display: none;')
   }
 }
