@@ -1,5 +1,4 @@
 const inputElement = document.querySelector('#url')
-const errorMessage = document.querySelector('.error-message')
 const ERRORS = {
   1: 'No URL specified ("url" parameter is empty)',
   2: 'Invalid URL submitted',
@@ -21,15 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 inputElement.addEventListener('blur', (event) => {
   if (!event.target.value) {
-    inputElement.classList.add('invalid')
-    errorMessage.setAttribute('style', 'display: block;')
+    displayInvalid(false)
   }
 })
 
-inputElement.addEventListener('change', (event) => {
+inputElement.addEventListener('input', (event) => {
   if (event.target.validity.valid) {
-    inputElement.classList.remove('invalid')
-    errorMessage.setAttribute('style', 'display: none;')
+    displayInvalid(true)
   }
 })
 
@@ -39,34 +36,16 @@ document.querySelector('.form').addEventListener('submit', async (e) => {
   const formData = new FormData(e.target)
   const url = formData.get('url')
   if (!url) {
-    inputElement.classList.add('invalid')
-    errorMessage.setAttribute('style', 'display: block;')
+    displayInvalid(false)
     return
   }
   const { result } = await getShortUrl(url)
-  prependCard(result)
-  saveToStorage(result)
-  e.target.reset()
+  if (url) {
+    prependCard(result)
+    saveToStorage(result)
+    e.target.reset()
+  }
 })
-
-function prependCard(data) {
-  if (!data) return
-  const { full_short_link, original_link } = data
-  const cardHTML = `
-    <p class="url">${original_link}</p>
-    <p class="short-url">${full_short_link}</p>
-    <div>
-      <button class="input button copy" value="${full_short_link}"
-      onclick="copyToClipboard(event)">
-        Copy
-      </button>
-    </div>`
-
-  const card = document.createElement('div')
-  card.classList.add('card-link')
-  card.innerHTML = cardHTML
-  document.querySelector('.link-list').prepend(card)
-}
 
 async function getShortUrl(url) {
   const fetchURI = `https://api.shrtco.de/v2/shorten?url=${url}`
@@ -85,6 +64,30 @@ async function getShortUrl(url) {
   }
 }
 
+function prependCard(data) {
+  if (!data) return
+  const { full_short_link, original_link } = data
+  const card = document.createElement('div')
+  card.classList.add('card-link')
+  card.innerHTML = `
+    <p class="url">${original_link}</p>
+    <p class="short-url">${full_short_link}</p>
+    <div>
+      <button class="input button copy" value="${full_short_link}"
+      onclick="copyToClipboard(event)">
+        Copy
+      </button>
+    </div>`
+
+  document.querySelector('.link-list').prepend(card)
+}
+
+function saveToStorage(result) {
+  var links = JSON.parse(localStorage.getItem('myLinks'))
+  const myLinks = JSON.stringify([...(links ?? []), result])
+  localStorage.setItem('myLinks', myLinks)
+}
+
 function copyToClipboard(event) {
   const button = event.target
   navigator.clipboard.writeText(button.value)
@@ -97,8 +100,13 @@ function copyToClipboard(event) {
   }, 1000)
 }
 
-function saveToStorage(result) {
-  var links = JSON.parse(localStorage.getItem('myLinks'))
-  const myLinks = JSON.stringify([...(links ?? []), result])
-  localStorage.setItem('myLinks', myLinks)
+function displayInvalid(valid) {
+  const errorMessage = document.querySelector('.error-message')
+  if (valid) {
+    inputElement.classList.remove('invalid')
+    errorMessage.setAttribute('style', 'display: none;')
+  } else {
+    inputElement.classList.add('invalid')
+    errorMessage.setAttribute('style', 'display: block;')
+  }
 }
