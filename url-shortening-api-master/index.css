@@ -196,6 +196,7 @@ nav a {
   text-align: left;
   font-size: 12px;
   display: none;
+  font-style: italic;
 }
 
 .invalid {
@@ -521,6 +522,10 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+  }
+  .error-message {
+    left: 45px;
+    font-size: 16px;
   }
 
   .url,
