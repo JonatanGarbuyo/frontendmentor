@@ -10,19 +10,36 @@
 }
 
 body {
-  font-size: 16px;
   box-sizing: border-box;
-  font-family: 'Be Vietnam Pro', sans-serif;
-  margin: 0;
-  text-align: center;
   color: var(--Dark_Blue);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 16px;
+  margin-block: 0;
+  margin-inline: auto;
+  max-width: 1440px;
+  position: relative;
+  text-align: center;
 }
 
 header {
-  background-image: url('./images/bg-tablet-pattern.svg');
+  /* background-image: url('./images/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
   background-size: 450px 450px;
-  background-position: 54px -110px;
+  background-position: 54px -110px; */
+  padding-bottom: 70px;
+  position: relative;
+}
+header::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: clamp(450px, 110vw, 790px);
+  background-position: right -130px top -110px;
   padding-bottom: 70px;
 }
 
@@ -35,10 +52,10 @@ header::after {
   background-image: url(./images/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
   background-size: 320px 320px;
-  background-position: 240px bottom;
+  background-position: right -184px top 100px;
   padding-bottom: 70px;
   width: 100%;
-  height: 350px;
+  height: 170%;
   z-index: -1;
 }
 
@@ -63,6 +80,7 @@ li {
 
 /* Generics */
 .button {
+  position: relative;
   width: 136px;
   height: 44px;
   border-radius: 44px;
@@ -72,6 +90,16 @@ li {
   display: inline-block;
   font-weight: bold;
   font-size: 12px;
+  overflow: hidden;
+}
+.btn-hover:hover:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .shadow {
@@ -82,8 +110,10 @@ li {
 .header-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 41px 26px 43px 24px;
-  align-items: flex-end;
+  align-items: center;
+  position: relative;
 }
 .header-logo {
   width: 110px;
@@ -143,11 +173,15 @@ li {
 .header-nav__list-item {
   padding: 12px;
 }
+.header-nav__list-item:hover {
+  color: var(--Dark_Grayish_Blue);
+}
 
 /* Intro  */
 .intro {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .intro-image {
@@ -191,6 +225,7 @@ li {
 }
 .card {
   padding-bottom: 36px;
+  position: relative;
 }
 .card-number {
   width: 66px;
@@ -207,7 +242,6 @@ li {
   margin-left: 15px;
   display: flex;
   align-items: center;
-  position: relative;
   background-color: var(--Very_Pale_Red);
 }
 .card-title h3 {
@@ -228,8 +262,7 @@ li {
 /* References */
 .references {
   overflow: hidden;
-  padding: 20px 0;
-  padding-bottom: 40px;
+  padding-bottom: 44px;
 }
 .references-title {
   margin: 18px;
@@ -394,6 +427,9 @@ li {
 .footer-links li {
   padding: 4px;
 }
+.footer-links a:hover {
+  color: var(--Bright_Red);
+}
 .footer-links a {
   font-size: 14px;
   display: inline-block;
@@ -402,15 +438,24 @@ li {
 
 .form-email {
   display: flex;
-  gap: 8px;
   justify-content: center;
   align-items: center;
   padding-inline: 24px;
+  justify-content: flex-start;
+}
+.form-email div {
+  display: flex;
+  gap: 8px;
+  width: 100%;
 }
 .form-email-input {
   padding-inline: 24px;
   flex-grow: 1;
   background-color: #fff;
+  color: var(--Dark_Blue);
+  font-size: 14px;
+  outline: none;
+  border: none;
 }
 .form-email-input::placeholder {
   font-size: 13px;
@@ -423,8 +468,21 @@ li {
   height: 44px;
   text-transform: uppercase;
 }
+.error-message {
+  font-size: 12px;
+  align-self: flex-start;
+  display: block;
+  color: var(--Bright_Red);
+  font-style: italic;
+  margin: 10px;
+  visibility: hidden;
+}
+.error-visible {
+  visibility: visible;
+}
 
 .copyright {
+  margin: 48px 0;
   color: var(--Dark_Grayish_Blue);
   position: absolute;
   bottom: 30px;
@@ -445,4 +503,7 @@ li {
 }
 .attribution a {
   color: var(--Bright_Red);
+}
+.attribution a:hover {
+  color: var(--Very_Pale_Red);
 }
