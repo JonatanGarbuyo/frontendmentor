@@ -44,8 +44,17 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 inputEmail.addEventListener('blur', (e) => {
   if (e.target.validity.valid) {
+    inputEmail.classList.remove('error')
     errorMessage.classList.remove('error-visible')
   } else {
+    inputEmail.classList.add('error')
     errorMessage.classList.add('error-visible')
+  }
+})
+
+inputEmail.addEventListener('input', (e) => {
+  if (e.target.validity.valid) {
+    inputEmail.classList.remove('error')
+    errorMessage.classList.remove('error-visible')
   }
 })

@@ -480,6 +480,9 @@ li {
 .error-visible {
   visibility: visible;
 }
+.error {
+  outline: 1px solid var(--Bright_Red);
+}
 
 .copyright {
   margin: 48px 0;
