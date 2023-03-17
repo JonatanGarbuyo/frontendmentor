@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index-media.css" />
 
     <script src="./index.js" defer></script>
     <title>Frontend Mentor | Manage landing page</title>
@@ -33,7 +34,7 @@
           width="146"
           height="24"
         />
-        <button class="header-open-menu">
+        <button class="header-open-menu md-hidden">
           <img
             src="./images/icon-hamburger.svg"
             alt="open menu"
@@ -43,7 +44,7 @@
         </button>
 
         <div class="overlay">
-          <button class="header-close-menu">
+          <button class="header-close-menu md-hidden">
             <img
               src="./images/icon-close.svg"
               alt="close menu"
@@ -71,6 +72,8 @@
             </ul>
           </nav>
         </div>
+
+        <button class="button btn-hover shadow sm-hidden">Get Started</button>
       </div>
 
       <div class="intro">
@@ -89,7 +92,7 @@
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
-          <button class="button shadow">Get Started</button>
+          <button class="button btn-hover shadow">Get Started</button>
         </div>
       </div>
     </header>
@@ -207,7 +210,7 @@
             </p>
           </li>
         </ul>
-        <div class="carousel-control">
+        <div class="carousel-control md-hidden">
           <input
             class="carousel-control-input"
             type="radio"
@@ -236,17 +239,17 @@
         </div>
       </div>
 
-      <button class="button shadow">Get Started</button>
+      <button class="button btn-hover shadow">Get Started</button>
     </section>
 
     <aside class="simplify">
       <h2 class="simplify-title">Simplify how your team works today.</h2>
-      <button class="button simplify-button">Get Started</button>
+      <button class="button btn-hover simplify-button">Get Started</button>
     </aside>
 
     <footer>
       <nav class="footer-navigation">
-        <div>
+        <div class="footer-logos-container">
           <ul class="social-icons">
             <li>
               <a
@@ -308,19 +311,22 @@
         </ul>
 
         <form class="form-email">
-          <input
-            class="button form-email-input"
-            type="email"
-            placeholder="Updates in your inbox…"
-            required
-          />
-
-          <input
-            class="button form-email-submit"
-            type="submit"
-            value="Go"
-            aria-label="Subscribe"
-          />
+          <div>
+            <input
+              class="button form-email-input"
+              type="email"
+              placeholder="Updates in your inbox…"
+              required
+            />
+            <button
+              class="button btn-hover form-email-submit"
+              type="submit"
+              aria-label="Subscribe"
+            >
+              Go
+            </button>
+          </div>
+          <span class="error-message">Please insert a valid email</span>
           <p class="copyright">Copyright 2020. All Rights Reserved</p>
         </form>
       </nav>
