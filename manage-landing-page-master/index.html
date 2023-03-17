@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index-media.css" />
+
+    <script src="./index.js" defer></script>
+    <title>Frontend Mentor | Manage landing page</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top">
+        <img
+          class="header-logo"
+          src="./images/logo.svg"
+          alt="logo"
+          width="146"
+          height="24"
+        />
+        <button class="header-open-menu md-hidden">
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="open menu"
+            width="25"
+            height="18"
+          />
+        </button>
+
+        <div class="overlay">
+          <button class="header-close-menu md-hidden">
+            <img
+              src="./images/icon-close.svg"
+              alt="close menu"
+              width="21"
+              height="22"
+            />
+          </button>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item">
+                <a aria-label="pricing" href="#pricing">Pricing</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a aria-label="product" href="#product">Product</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a aria-label="about" href="#about">About Us</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a aria-label="careers" href="#careers">Careers</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a aria-label="community" href="#community">Community</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <button class="button btn-hover shadow sm-hidden">Get Started</button>
+      </div>
+
+      <div class="intro">
+        <img
+          class="intro-image"
+          src="./images/illustration-intro.svg"
+          alt="charts"
+          width="580"
+          height="525"
+        />
+        <div class="intro-content">
+          <h1 class="intro-title">
+            Bring everyone together to build better products.
+          </h1>
+          <p class="intro-text">
+            Manage makes it simple for software teams to plan day-to-day tasks
+            while keeping the larger team goals in view.
+          </p>
+          <button class="button btn-hover shadow">Get Started</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <h2 class="diferent-title">What&#x2019;s different about Manage?</h2>
+        <p class="diferent-text">
+          Manage provides all the functionality your team needs, without the
+          complexity. Our software is tailor-made for modern digital product
+          teams.
+        </p>
+      </div>
+
+      <div class="card-list">
+        <div class="card">
+          <div class="card-title">
+            <span class="card-number">01</span>
+            <h3>Track company-wide progress</h3>
+          </div>
+          <p class="card-text">
+            See how your day-to-day tasks fit into the wider vision. Go from
+            tracking progress at the milestone level all the way done to the
+            smallest of details. Never lose sight of the bigger picture again.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span class="card-number"> 02 </span>
+            <h3>Advanced built-in reports</h3>
+          </div>
+          <p class="card-text">
+            Set internal delivery estimates and track progress toward company
+            goals. Our customisable dashboard helps you build out the reports
+            you need to keep key stakeholders informed.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span class="card-number"> 03 </span>
+            <h3>Everything you need in one place</h3>
+          </div>
+          <p class="card-text">
+            Stop jumping from one service to another to communicate, store
+            files, track tasks and share documents. Manage offers an all-in-one
+            team productivity solution.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section class="references">
+      <h2 class="references-title">What they&#x2019;ve said</h2>
+
+      <div class="carousel">
+        <ul class="carousel-list">
+          <li id="card1" class="carousel-card">
+            <img
+              class="carousel-card-image"
+              src="./images/avatar-anisha.png"
+              alt="avatar Anisha"
+              width="144"
+              height="144"
+            />
+            <h3 class="carousel-card-title">Anisha Li</h3>
+            <p class="carousel-card-text">
+              “Manage has supercharged our team&#x2019;s workflow. The ability
+              to maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </li>
+          <li id="card2" class="carousel-card">
+            <img
+              class="carousel-card-image"
+              src="./images/avatar-ali.png"
+              alt="avatar Ali"
+              width="144"
+              height="144"
+            />
+            <h3 class="carousel-card-title">Ali Bravo</h3>
+            <p class="carousel-card-text">
+              “We have been able to cancel so many other subscriptions since
+              using Manage. There is no more cross-channel confusion and
+              everyone is much more focused.”
+            </p>
+          </li>
+          <li id="card3" class="carousel-card">
+            <img
+              class="carousel-card-image"
+              src="./images/avatar-richard.png"
+              alt="avatar Richard"
+              width="144"
+              height="144"
+            />
+            <h3 class="carousel-card-title">Richard Watts</h3>
+            <p class="carousel-card-text">
+              “Manage allows us to provide structure and process. It keeps us
+              organized and focused. I can&#x2019;t stop recommending them to
+              everyone I talk to!”
+            </p>
+          </li>
+          <li id="card4" class="carousel-card">
+            <img
+              class="carousel-card-image"
+              src="./images/avatar-shanai.png"
+              alt="avatar Shanai"
+              width="144"
+              height="144"
+            />
+            <h3 class="carousel-card-title">Shanai Gough</h3>
+            <p class="carousel-card-text">
+              “Their software allows us to track, manage and collaborate on our
+              projects from anywhere. It keeps the whole team in-sync without
+              being intrusive.”
+            </p>
+          </li>
+        </ul>
+        <div class="carousel-control md-hidden">
+          <input
+            class="carousel-control-input"
+            type="radio"
+            name="carousel-controls"
+            data-card-id="card1"
+            checked
+          />
+          <input
+            class="carousel-control-input"
+            type="radio"
+            name="carousel-controls"
+            data-card-id="card2"
+          />
+          <input
+            class="carousel-control-input"
+            type="radio"
+            name="carousel-controls"
+            data-card-id="card3"
+          />
+          <input
+            class="carousel-control-input"
+            type="radio"
+            name="carousel-controls"
+            data-card-id="card4"
+          />
+        </div>
+      </div>
+
+      <button class="button btn-hover shadow">Get Started</button>
+    </section>
+
+    <aside class="simplify">
+      <h2 class="simplify-title">Simplify how your team works today.</h2>
+      <button class="button btn-hover simplify-button">Get Started</button>
+    </aside>
+
+    <footer>
+      <nav class="footer-navigation">
+        <div class="footer-logos-container">
+          <ul class="social-icons">
+            <li>
+              <a
+                href="https://facebook.com"
+                aria-label="Facebook"
+                target="_blank"
+                ><i class="icon facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://youtube.com "
+                aria-label="Youtube"
+                target="_blank"
+                ><i class="icon youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com" aria-label="Twitter" target="_blank"
+                ><i class="icon twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://pinterest.com"
+                aria-label="Pinterest"
+                target="_blank"
+                ><i class="icon pinterest"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                aria-label="Instagram"
+                target="_blank"
+                ><i class="icon instagram"></i
+              ></a>
+            </li>
+          </ul>
+          <img
+            class="footer-logo"
+            src="./images/logo-white.svg"
+            alt="logo"
+            width="146"
+            height="24"
+          />
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#home" aria-label="Home">Home</a></li>
+          <li><a href="#pricing" aria-label="Pricing">Pricing</a></li>
+          <li><a href="#products" aria-label="Products">Products</a></li>
+          <li><a href="#about" aria-label="About Us">About Us</a></li>
+          <li><a href="#careers" aria-label="Careers">Careers</a></li>
+          <li><a href="#community" aria-label="Community">Community</a></li>
+          <li>
+            <a href="#policy" aria-label="Privacy Policy">Privacy Policy</a>
+          </li>
+        </ul>
+
+        <form class="form-email">
+          <div>
+            <input
+              class="button form-email-input"
+              type="email"
+              placeholder="Updates in your inbox…"
+              required
+            />
+            <button
+              class="button btn-hover form-email-submit"
+              type="submit"
+              aria-label="Subscribe"
+            >
+              Go
+            </button>
+          </div>
+          <span class="error-message">Please insert a valid email</span>
+          <p class="copyright">Copyright 2020. All Rights Reserved</p>
+        </form>
+      </nav>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/JonatanGarbuyo" target="_blank"
+          >Jonatan Garbuyo</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>
