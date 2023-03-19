@@ -1,134 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="description" content="Author: Jonatan Garbuyo" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
 
-  Features
-  Pricing
-  Contact
-  Login
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="./images/logo-bookmark.svg"
+        alt="logo"
+        width="148"
+        height="25"
+      />
+      <button class="menu-open">
+        <img
+          src="./images/icon-hamburger.svg"
+          alt="open menu"
+          width="18"
+          height="15"
+        />
+      </button>
 
-  A Simple Bookmark Manager
+      <nav class="menu">
+        <div class="menu-header">
+          <img
+            class="logo-mobile"
+            src="./images/logo-bookmark-white.svg"
+            alt="logo"
+            width="148"
+            height="25"
+          />
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
+          <img
+            src="./images/icon-close.svg"
+            alt="logo"
+            width="18"
+            height="15"
+          />
+        </div>
+        <ul class="menu-body">
+          <li><hr /></li>
+          <li class="menu-body-item"><a href="#features">Features</a></li>
+          <li><hr /></li>
+          <li class="menu-body-item"><a href="#pricing">Pricing</a></li>
+          <li><hr /></li>
+          <li class="menu-body-item"><a href="#contact">Contact</a></li>
+          <li><hr /></li>
+          <li class="menu-body-item login">
+            <a class="button menu-button" href="#login">Login</a>
+          </li>
+        </ul>
+        <div class="menu-footer">
+          <a href="https://www.facebook.com">
+            <img
+              src="./images/icon-facebook.svg"
+              alt="facebok"
+              width="24"
+              height="24"
+            />
+          </a>
+          <a href="https://www.twitter.com">
+            <img
+              src="./images/icon-twitter.svg"
+              alt="twitter"
+              width="24"
+              height="20"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="background-decoration"></div>
+      <section class="hero">
+        <h1>A Simple Bookmark Manager</h1>
+        <p>
+          A clean and simple interface to organize your favourite websites. Open
+          a new browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div>
+          <button>Get it on Chrome</button>
+          <button>Get it on Firefox</button>
+        </div>
+      </section>
+      <section id="features" class="features">
+        <h2>Features</h2>
+        <p>
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
 
-  Get it on Chrome
-  Get it on Firefox
+        <h3>Simple Bookmarking</h3>
+        <h3>Speedy Searching</h3>
+        <h3>Easy Sharing</h3>
 
-  Features
+        <div class="features-card">
+          <!-- <img
+            src="./images/illustration-features-tab-1.svg"
+            width="536"
+            height="346"
+            alt="organize"
+          /> -->
+          <h3>Bookmark in one click</h3>
+          <p>
+            Organize your bookmarks however you like. Our simple drag-and-drop
+            interface gives you complete control over how you manage your
+            favourite sites.
+          </p>
+          <button>More Info</button>
+        </div>
 
-  Our aim is to make it quick and easy for you to access your favourite websites. 
-  Your bookmarks sync between your devices so you can access them on the go.
+        <div class="features-card">
+          <!-- <img
+            src="./images/illustration-features-tab-2.svg"
+            width="478"
+            height="416"
+            alt="search"
+          /> -->
 
-  Simple Bookmarking
-  Speedy Searching
-  Easy Sharing
+          <h3>Intelligent search</h3>
+          <p>
+            Our powerful search feature will help you find saved sites in no
+            time at all. No need to trawl through all of your bookmarks.
+          </p>
+          <button>More Info</button>
+        </div>
 
-  Bookmark in one click
+        <div class="features-card">
+          <!-- <img
+            src="./images/illustration-features-tab-3.svg"
+            width="440"
+            height="380"
+            alt="share"
+          /> -->
 
-  Organize your bookmarks however you like. Our simple drag-and-drop interface 
-  gives you complete control over how you manage your favourite sites.
+          <h3>Share your bookmarks</h3>
+          <p>
+            Easily share your bookmarks and collections with others. Create a
+            shareable link that you can send at the click of a button.
+          </p>
+          <button>More Info</button>
+        </div>
+      </section>
 
-  More Info
+      <section class="download">
+        <h2>Download the extension</h2>
+        <p>
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize.
+        </p>
+        <div class="download-cards-list">
+          <div class="download-card">
+            <img
+              src="./images/logo-chrome.svg"
+              alt="chrome logo"
+              width="102"
+              height="100"
+            />
+            <h3>Add to Chrome</h3>
+            <p>Minimum version 62</p>
+            <button>Add & Install Extension</button>
+          </div>
 
-  Intelligent search
+          <div class="download-card">
+            <img
+              src="./images/logo-firefox.svg"
+              alt="firefox logo"
+              width="105"
+              height="100"
+            />
+            <h3>Add to Firefox</h3>
+            <p>Minimum version 55</p>
+            <button>Add & Install Extension</button>
+          </div>
 
-  Our powerful search feature will help you find saved sites in no time at all. 
-  No need to trawl through all of your bookmarks.
+          <div class="download-card">
+            <img
+              src="./images/logo-opera.svg"
+              alt="opera logo"
+              width="96"
+              height="100"
+            />
+            <h3>Add to Opera</h3>
+            <p>Minimum version 46</p>
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+      </section>
 
-  More Info
+      <section>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
 
-  Share your bookmarks
+        <div class="accordion-list">
+          <div class="accordion-card">
+            <h3>What is Bookmark?</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.
+            </p>
+          </div>
 
-  Easily share your bookmarks and collections with others. Create a shareable 
-  link that you can send at the click of a button.
+          <div class="accordion-card">
+            <h3>How can I request a new browser?</h3>
+            <p>
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="accordion-card">
+            <h3>Is there a mobile app?</h3>
+            <p>
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+          <div class="accordion-card">
+            <h3>What about other Chromium browsers?</h3>
+            <p>
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
+            </p>
+          </div>
+        </div>
+        <button>More Info</button>
+      </section>
+    </main>
 
-  More Info
+    <aside id="contact">
+      <p>35,000+ already joined</p>
+      <h2>Stay up-to-date with what we’re doing</h2>
+      <form action="#">
+        <input type="email" id="email" />
+        <input type="submit" value="Contact Us" />
+      </form>
+    </aside>
+    <footer>
+      <img
+        src="./images/logo-bookmark-clear.svg"
+        alt="logo"
+        width="148"
+        height="25"
+      />
+      <ul>
+        <li><a href="/Features">Features</a></li>
+        <li><a href="/Pricing">Pricing</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com">
+          <img
+            src="./images/icon-facebook.svg"
+            alt="facebok"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://www.twitter.com">
+          <img
+            src="./images/icon-twitter.svg"
+            alt="twitter"
+            width="24"
+            height="20"
+          />
+        </a>
+      </div>
 
-  Download the extension
-
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-  got a favourite you’d like us to prioritize.
-
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
-
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
-
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
-
-  Frequently Asked Questions
-  
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
-
-  <!-- Question 1 -->
-  What is Bookmark?
-
-  <!-- Answer 1 -->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-  <!-- Question 2 -->
-  How can I request a new browser?
-
-  <!-- Answer 2 -->
-  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-  <!-- Question 3 -->
-  Is there a mobile app?
-
-  <!-- Answer 3 -->
-  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-  sollicitudin ex et ultricies bibendum.
-
-  <!-- Question 4 -->
-  What about other Chromium browsers?
-
-  <!-- Answer 4 -->
-  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-  vitae neque eget nisl gravida pellentesque non ut velit.
-
-  More Info
-
-  35,000+ already joined
-
-  Stay up-to-date with what we’re doing
-
-  Contact Us
-
-  Features
-  Pricing
-  Contact
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/JonatanGarbuyo">Jonatan Garbuyo</a>.
+      </p>
+    </footer>
+  </body>
 </html>
