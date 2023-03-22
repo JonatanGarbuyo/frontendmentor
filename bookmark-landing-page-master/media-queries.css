@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+  .desktop-navbar {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding-left: 171px;
+    padding-right: 165px;
+  }
+}
