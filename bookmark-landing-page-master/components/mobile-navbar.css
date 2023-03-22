@@ -13,8 +13,6 @@ hr {
 }
 
 .menu-open {
-  background: none;
-  border: none;
   height: 15px;
   padding: 0;
 }
@@ -30,6 +28,7 @@ hr {
 
 /* Navbar */
 .menu {
+  display: block;
   color: white;
   height: -webkit-fill-available;
   inset: 0;
