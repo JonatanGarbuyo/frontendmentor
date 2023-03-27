@@ -78,9 +78,15 @@ main {
 
   border-radius: 203px;
 }
+
 main .background-decoration {
   right: -110px;
   top: 90px;
+}
+
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
 }
 
 /* Header */
@@ -186,11 +192,6 @@ main .background-decoration {
   text-align: center;
 }
 
-.features input[type='radio'] {
-  position: absolute;
-  opacity: 0;
-}
-
 .features input[type='radio']:checked + label {
   border-bottom: 4px solid var(--Soft_Red);
   color: var(--Very_Dark_Blue);
@@ -225,6 +226,7 @@ main .background-decoration {
 
 /* Download  */
 .download {
+  padding-bottom: 80px;
 }
 .download-title {
   margin-bottom: 0;
@@ -239,26 +241,201 @@ main .background-decoration {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 54px;
 }
 
 .download-card {
-  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 24px;
   background-image: url('./images/bg-dots.svg');
-  background-position: center bottom 76px;
+  background-position: center bottom 96px;
   background-repeat: no-repeat;
   width: 280px;
-  height: 372px;
   box-shadow: var(--Very_Dark_Blue) 0px 4px 16px -10px;
   /* box-shadow: var(--Very_Dark_Blue) 0px 13px 27px -5px; */
 }
 .download-card-title {
   font-size: 20px;
   margin-bottom: 0;
+  margin-top: 32px;
   font-weight: 500;
 }
+.download-card-text {
+  margin-top: 8px;
+}
 .download-card button {
+  margin-top: 45px;
+  flex-grow: 1;
   width: 232px;
   height: 48px;
+}
+
+/* FAQ */
+.faq {
+  padding-bottom: 120px;
+}
+.faq-title {
+  padding-inline: 26px;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+.faq-text {
+  padding-inline: 26px;
+}
+
+/* Accordion */
+.accordion-list {
+  text-align: left;
+  padding-top: 32px;
+  padding-inline: 32px;
+  padding-bottom: 42px;
+}
+.accordion-card {
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.accordion-card label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+  margin-bottom: 20px;
+}
+.accordion-card label::after {
+  content: '';
+  width: 18px;
+  height: 12px;
+  background: var(--Soft-Blue);
+  display: inline-block;
+  margin-inline-start: 10px;
+  mask-image: url(./images/icon-arrow.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url(./images/icon-arrow.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.accordion-card input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+.accordion-card input[type='checkbox']:checked ~ p {
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 28px;
+}
+
+.accordion-card input[type='checkbox']:checked ~ label::after {
+  transform: rotate(180deg);
+  background-color: var(--Soft_Red);
+}
+
+.accordion-text {
+  color: var(--Grayish_Blue);
+  line-height: 30px;
+  margin: 0;
+  overflow-y: hidden;
+  height: 0;
+}
+
+.faq-button {
+  width: 114px;
+  height: 48px;
+}
+
+/* Contact  */
+.contact {
+  padding-top: 70px;
+  padding-bottom: 28px;
+  background-color: var(--Soft-Blue);
+  color: white;
+}
+.contact-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.contact-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  padding-inline: 24px;
+}
+
+.contact form {
+  gap: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.input-wrapper {
+  position: relative;
+  width: fit-content;
+  background-color: var(--Soft_Red);
+  border-radius: 6px;
+  margin: auto;
+  overflow: hidden;
+}
+.email-warning-icon {
+  display: none;
+  position: absolute;
+  background-image: url(./images/icon-error.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  right: 16px;
+  top: 14px;
+}
+.email-warning {
+  margin-block: 7px;
+  letter-spacing: 1px;
+  display: none;
+  font-size: 9px;
+  text-align: left;
+  padding-inline: 13px;
+  font-style: italic;
+}
+.contact input {
+  height: 48px;
+  width: 311px;
+}
+.contact input[type='email'] {
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding-inline: 20px;
+  outline: none;
+  border: none;
+}
+.contact input[type='email']::placeholder {
+  color: #c3c3c3;
+  font-weight: 500;
+  font-size: 14px;
+}
+.contact input[type='submit'] {
+  background-color: var(--Soft_Red);
+  letter-spacing: 1px;
+  color: #fafafa;
+}
+
+.contact input[type='email']:invalid {
+  border: 2px solid var(--Soft_Red);
+}
+
+.contact input:invalid ~ .email-warning-icon {
+  display: block;
+}
+.contact input:invalid ~ .email-warning {
+  display: block;
 }
 
 /* footer */
@@ -272,14 +449,24 @@ footer {
   position: relative;
 }
 .footer-logo {
-  /* display: inline-block; */
-  /* -webkit-mask-image: url('./images/logo-bookmark.svg');
-  mask-image: url('./images/logo-bookmark.svg');
-  background: #fff;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  width: 148px;
-  height: 25px; */
+  margin: 40px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.footer-icons {
+  padding-block: 50px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 /* atribution */
