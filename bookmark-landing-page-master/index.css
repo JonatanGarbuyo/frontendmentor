@@ -1,5 +1,5 @@
 :root {
-  --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft_Blue: hsl(231, 69%, 60%);
   --Soft_Red: hsl(0, 94%, 66%);
   --Grayish_Blue: hsl(229, 8%, 60%);
   --Very_Dark_Blue: hsl(229, 31%, 21%);
@@ -47,21 +47,22 @@ main {
 
 /* generics */
 .button {
-  background-color: var(--Soft-Blue);
-  border: none;
+  background-color: var(--Soft_Blue);
   border-radius: 6px;
+  border: 2px solid var(--Soft_Blue);
   color: white;
-  height: 44px;
-  width: 304px;
-  font-weight: bold;
+  cursor: pointer;
   font-size: 14px;
+  font-weight: bold;
   padding: 0;
 }
+
 .subtitle {
   color: var(--Very_Dark_Blue);
   font-size: 24px;
   font-weight: 500;
 }
+
 .text {
   color: var(--Grayish_Blue);
   font-size: 15px;
@@ -69,7 +70,7 @@ main {
 }
 
 .background-decoration {
-  background-color: var(--Soft-Blue);
+  background-color: var(--Soft_Blue);
   border-radius: 203px;
   height: 203px;
   position: absolute;
@@ -85,6 +86,15 @@ main .background-decoration {
 input[type='radio'] {
   opacity: 0;
   position: absolute;
+}
+
+.hover-red:hover {
+  background-color: white;
+  color: var(--Soft_Red);
+}
+.hover-blue:hover {
+  background-color: white;
+  color: var(--Soft_Blue);
 }
 
 /* Header */
@@ -107,10 +117,11 @@ input[type='radio'] {
   color: white;
   display: flex;
   flex-direction: row;
-  height: 40px;
+  height: 36px;
   justify-content: center;
   margin: auto;
-  width: 111px;
+  width: 107px;
+  border: 2px solid var(--Soft_Red);
 }
 
 /* Hero */
@@ -148,8 +159,12 @@ input[type='radio'] {
 }
 .hero-button-container button:nth-child(2) {
   background-color: #f7f7f7;
+  border: 2px solid #f7f7f7;
   box-shadow: var(--Very_Dark_Blue) 0px 4px 16px -10px;
   color: var(--Grayish_Blue);
+}
+.hero-button-container button:nth-child(2):hover {
+  border: 2px solid var(--Grayish_Blue);
 }
 
 /* Features */
@@ -272,6 +287,8 @@ input[type='radio'] {
 
 /* FAQ */
 .faq {
+  margin: auto;
+  max-width: 550px;
   padding-bottom: 120px;
 }
 .faq-title {
@@ -285,8 +302,8 @@ input[type='radio'] {
 
 /* Accordion */
 .accordion-list {
-  padding-inline: 32px;
   padding-bottom: 42px;
+  padding-inline: 32px;
   padding-top: 32px;
   text-align: left;
 }
@@ -308,7 +325,7 @@ input[type='radio'] {
   -webkit-mask-image: url(./images/icon-arrow.svg);
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  background: var(--Soft-Blue);
+  background: var(--Soft_Blue);
   content: '';
   display: inline-block;
   height: 12px;
@@ -349,7 +366,7 @@ input[type='radio'] {
 
 /* Contact  */
 .contact {
-  background-color: var(--Soft-Blue);
+  background-color: var(--Soft_Blue);
   color: white;
   padding-bottom: 28px;
   padding-top: 70px;
@@ -367,15 +384,16 @@ input[type='radio'] {
 }
 
 .contact form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  justify-content: center;
   padding: 32px;
 }
 .input-wrapper {
   background-color: var(--Soft_Red);
   border-radius: 6px;
-  margin: auto;
   overflow: hidden;
   position: relative;
   width: fit-content;
@@ -418,10 +436,11 @@ input[type='radio'] {
   font-size: 14px;
   font-weight: 500;
 }
-.contact input[type='submit'] {
+.submit {
   background-color: var(--Soft_Red);
   color: #fafafa;
   letter-spacing: 1px;
+  border: 2px solid var(--Soft_Red);
 }
 
 .contact input[type='email']:invalid {
@@ -459,11 +478,41 @@ footer ul {
   text-transform: uppercase;
 }
 
+footer a:hover {
+  color: var(--Soft_Red);
+}
 .footer-icons {
   align-items: center;
   display: flex;
   gap: 40px;
   padding-block: 50px;
+}
+.social-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  background: var(--Soft_Blue);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: white;
+}
+
+.facebook {
+  mask-image: url('./images/icon-facebook.svg');
+  -webkit-mask-image: url('./images/icon-facebook.svg');
+}
+.facebook:hover {
+  background-color: var(--Soft_Red);
+}
+.twitter {
+  mask-image: url('./images/icon-twitter.svg');
+  -webkit-mask-image: url('./images/icon-twitter.svg');
+  height: 20px;
+}
+.twitter:hover {
+  background-color: var(--Soft_Red);
 }
 
 /* atribution */
