@@ -5,11 +5,50 @@
   .navbar {
     display: none;
   }
+
+  .contact form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .contact input[type='submit'] {
+    width: 123px;
+    height: 46px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-container ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .footer-icons {
+    padding-inline: 40px;
+  }
 }
 
 @media (min-width: 1024px) {
   header {
     padding: 48px;
+  }
+
+  .hero {
+    flex-direction: row-reverse;
+    text-align: left;
+    padding-block: 58px;
+  }
+  .hero-button-container {
+    justify-content: flex-start;
+    padding: 40px;
+  }
+  .features-title {
+  }
+  .features-text {
+    margin-block: 28px;
   }
 }
 
@@ -17,5 +56,129 @@
   header {
     padding-left: 171px;
     padding-right: 165px;
+  }
+  /* main {
+    padding-left: 110px;
+    padding-right: 50px;
+  } */
+
+  .subtitle {
+    font-size: 32px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero img {
+    margin-inline: 50px;
+  }
+  .hero-content {
+    padding-left: 122px;
+    padding-block: 38px;
+  }
+  .hero-title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .hero-text {
+    max-width: 538px;
+    margin-block: 24px;
+  }
+  .hero-button-container {
+    padding-block: 8px;
+  }
+  .hero-button-container button {
+    width: 166px;
+  }
+
+  .tab {
+    display: inline-block;
+    width: auto;
+    padding-inline: 52px;
+    padding-bottom: 26px;
+  }
+  .tab-separator {
+    display: none;
+  }
+  .main-tab-separator {
+    display: block;
+    max-width: 670px;
+  }
+  .tab-card {
+    flex-direction: row;
+    text-align: left;
+    gap: 124px;
+    justify-content: center;
+  }
+  .tab-card-text {
+    max-width: 450px;
+    padding-left: 0;
+    margin-block: 22px;
+  }
+  .tab-card button {
+    display: block;
+    margin-left: 0;
+    margin-block: 30px;
+  }
+  .tab-card img {
+    margin: unset;
+  }
+
+  .features .background-decoration {
+    top: 486px;
+  }
+
+  .download {
+    padding-top: 96px;
+  }
+  .download-text {
+    margin-block: 20px;
+  }
+  .download-cards-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 34px;
+  }
+  .download-card {
+    position: relative;
+  }
+  .download-card:nth-child(2) {
+    top: 38px;
+  }
+  .download-card:nth-child(3) {
+    top: 78px;
+  }
+
+  .faq {
+    padding-bottom: 148px;
+    padding-top: 98px;
+  }
+  .faq-text {
+    max-width: 540px;
+    margin-block: 24px;
+  }
+
+  .faq-separator {
+    display: block;
+    width: 100%;
+  }
+
+  .accordion-card {
+    font-size: 18px;
+  }
+
+  .accordion-list {
+    padding-bottom: 52px;
+  }
+
+  .contact-text {
+    letter-spacing: 6px;
+  }
+  .contact-title {
+    margin-top: 40px;
+    font-size: 32px;
+    max-width: 490px;
+    margin-inline: auto;
   }
 }
