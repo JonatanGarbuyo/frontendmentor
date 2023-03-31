@@ -101,7 +101,8 @@
         <input type="radio" id="easy" name="tab" value="easy" />
         <label class="tab hover-red" for="easy">Easy Sharing</label>
 
-        <hr class="tab-separator" />
+        <hr class="tab-separator main-tab-separator" />
+
         <div class="tab-card simple">
           <img
             class="tab-card-image"
@@ -110,13 +111,15 @@
             height="346"
             alt="organize"
           />
-          <h3 class="tab-card-title subtitle">Bookmark in one click</h3>
-          <p class="text tab-card-text">
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
-          </p>
-          <button class="button hover-blue">More Info</button>
+          <div>
+            <h3 class="tab-card-title subtitle">Bookmark in one click</h3>
+            <p class="text tab-card-text">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="button hover-blue">More Info</button>
+          </div>
         </div>
 
         <div class="tab-card speedy">
@@ -127,12 +130,14 @@
             height="416"
             alt="search"
           />
-          <h3 class="tab-card-title subtitle">Intelligent search</h3>
-          <p class="text tab-card-text">
-            Our powerful search feature will help you find saved sites in no
-            time at all. No need to trawl through all of your bookmarks.
-          </p>
-          <button class="button hover-blue">More Info</button>
+          <div>
+            <h3 class="tab-card-title subtitle">Intelligent search</h3>
+            <p class="text tab-card-text">
+              Our powerful search feature will help you find saved sites in no
+              time at all. No need to trawl through all of your bookmarks.
+            </p>
+            <button class="button hover-blue">More Info</button>
+          </div>
         </div>
 
         <div class="tab-card easy">
@@ -143,12 +148,14 @@
             height="380"
             alt="share"
           />
-          <h3 class="tab-card-title subtitle">Share your bookmarks</h3>
-          <p class="text tab-card-text">
-            Easily share your bookmarks and collections with others. Create a
-            shareable link that you can send at the click of a button.
-          </p>
-          <button class="button hover-blue">More Info</button>
+          <div>
+            <h3 class="tab-card-title subtitle">Share your bookmarks</h3>
+            <p class="text tab-card-text">
+              Easily share your bookmarks and collections with others. Create a
+              shareable link that you can send at the click of a button.
+            </p>
+            <button class="button hover-blue">More Info</button>
+          </div>
         </div>
       </section>
 
@@ -205,9 +212,11 @@
         </p>
 
         <div class="accordion-list">
+          <hr class="tab-separator main-tab-separator faq-separator" />
+
           <div class="accordion-card">
             <input type="checkbox" name="accordion" id="bookmark" />
-            <label for="bookmark">What is Bookmark?</label>
+            <label class="hover-red" for="bookmark">What is Bookmark?</label>
 
             <p class="accordion-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -218,7 +227,9 @@
 
           <div class="accordion-card">
             <input type="checkbox" name="accordion" id="how" />
-            <label for="how">How can I request a new browser?</label>
+            <label class="hover-red" for="how"
+              >How can I request a new browser?</label
+            >
 
             <p class="accordion-text">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
@@ -231,7 +242,7 @@
           </div>
           <div class="accordion-card">
             <input type="checkbox" name="accordion" id="mobile" />
-            <label for="mobile">Is there a mobile app?</label>
+            <label class="hover-red" for="mobile">Is there a mobile app?</label>
 
             <p class="accordion-text">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
@@ -242,7 +253,9 @@
           </div>
           <div class="accordion-card">
             <input type="checkbox" name="accordion" id="about" />
-            <label for="about">What about other Chromium browsers?</label>
+            <label class="hover-red" for="about"
+              >What about other Chromium browsers?</label
+            >
 
             <p class="accordion-text">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
@@ -282,35 +295,37 @@
     </aside>
 
     <footer>
-      <img
-        class="footer-logo"
-        src="./images/logo-bookmark-clear.svg"
-        alt="logo"
-        width="148"
-        height="25"
-      />
-      <ul>
-        <li><a href="/Features">Features</a></li>
-        <li><a href="/Pricing">Pricing</a></li>
-        <li><a href="/Contact">Contact</a></li>
-      </ul>
+      <div class="footer-container">
+        <img
+          class="footer-logo"
+          src="./images/logo-bookmark-clear.svg"
+          alt="logo"
+          width="148"
+          height="25"
+        />
+        <ul>
+          <li><a href="/Features">Features</a></li>
+          <li><a href="/Pricing">Pricing</a></li>
+          <li><a href="/Contact">Contact</a></li>
+        </ul>
 
-      <div class="footer-icons">
-        <a href="https://www.facebook.com">
-          <i class="social-icon facebook" aria-label="facebok"></i>
-        </a>
-        <a href="https://www.twitter.com">
-          <i class="social-icon twitter" aria-label="twitter"></i>
-        </a>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com" aria-label="facebok">
+            <i class="social-icon facebook"></i>
+          </a>
+          <a href="https://www.twitter.com" aria-label="twitter">
+            <i class="social-icon twitter"></i>
+          </a>
+        </div>
+
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/JonatanGarbuyo">Jonatan Garbuyo</a>.
+        </p>
       </div>
-
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://github.com/JonatanGarbuyo">Jonatan Garbuyo</a>.
-      </p>
     </footer>
   </body>
 </html>
