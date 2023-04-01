@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="media-queries.css" />
+    <script type="module" src="index.js"></script>
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="./images/logo-bookmark.svg"
+        alt="logo"
+        width="148"
+        height="25"
+      />
+      <ul class="desktop-navbar">
+        <li class="desktop-navbar-item hover-red">
+          <a href="#features">Features</a>
+        </li>
+        <li class="desktop-navbar-item hover-red">
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li class="desktop-navbar-item hover-red">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="desktop-navbar-item">
+          <a class="button desktop-navbar-button hover-red" href="#login"
+            >Login</a
+          >
+        </li>
+      </ul>
+      <fm-mobile-navbar class="navbar"></fm-mobile-navbar>
+    </header>
+
+    <main>
+      <div class="background-decoration"></div>
+      <section class="hero">
+        <img
+          src="./images/illustration-hero.svg"
+          alt="A Simple Bookmark Manager"
+          width="657"
+          height="466"
+        />
+        <div class="hero-content">
+          <h1 class="hero-title">
+            A Simple Bookmark<br />
+            Manager
+          </h1>
+          <p class="text hero-text">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="hero-button-container">
+            <button class="button hover-blue">Get it on Chrome</button>
+            <button class="button">Get it on Firefox</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="background-decoration"></div>
+
+        <h2 class="features-title subtitle">Features</h2>
+        <p class="text features-text">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+
+        <hr class="tab-separator" />
+        <input type="radio" id="simple" name="tab" value="simple" checked />
+        <label class="tab hover-red" for="simple">Simple Bookmarking</label>
+
+        <hr class="tab-separator" />
+        <input type="radio" id="speedy" name="tab" value="speedy" />
+        <label class="tab hover-red" for="speedy">Speedy Searching</label>
+
+        <hr class="tab-separator" />
+        <input type="radio" id="easy" name="tab" value="easy" />
+        <label class="tab hover-red" for="easy">Easy Sharing</label>
+
+        <hr class="tab-separator main-tab-separator" />
+
+        <fm-tab-card
+          id="simple-card"
+          image-url="./images/illustration-features-tab-1.svg"
+          image-width="536"
+          image-height="346"
+          title="Bookmark in one click"
+          text="Organize your bookmarks however you like. Our simple drag-and-drop
+        interface gives you complete control over how you manage your
+        favourite sites."
+          visible="true"
+        ></fm-tab-card>
+
+        <fm-tab-card
+          id="speedy-card"
+          image-url="./images/illustration-features-tab-2.svg"
+          image-width="478"
+          image-height="416"
+          title="Intelligent search"
+          text="Our powerful search feature will help you find saved sites in no
+          time at all. No need to trawl through all of your bookmarks."
+          visible="false"
+        ></fm-tab-card>
+
+        <fm-tab-card
+          id="easy-card"
+          image-url="./images/illustration-features-tab-3.svg"
+          image-width="440"
+          image-height="380"
+          title="Share your bookmarks"
+          text="Easily share your bookmarks and collections with others. Create a
+          shareable link that you can send at the click of a button."
+          visible="false"
+        ></fm-tab-card>
+      </section>
+
+      <section class="download">
+        <h2 class="subtitle download-title">Download the extension</h2>
+        <p class="text download-text">
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize.
+        </p>
+        <div class="download-cards-list">
+          <div class="download-card">
+            <img
+              src="./images/logo-chrome.svg"
+              alt="chrome logo"
+              width="102"
+              height="100"
+            />
+            <h3 class="download-card-title">Add to Chrome</h3>
+            <p class="text download-card-text">Minimum version 62</p>
+            <button class="button hover-blue">Add & Install Extension</button>
+          </div>
+
+          <div class="download-card">
+            <img
+              src="./images/logo-firefox.svg"
+              alt="firefox logo"
+              width="105"
+              height="100"
+            />
+            <h3 class="download-card-title">Add to Firefox</h3>
+            <p class="text download-card-text">Minimum version 55</p>
+            <button class="button hover-blue">Add & Install Extension</button>
+          </div>
+
+          <div class="download-card">
+            <img
+              src="./images/logo-opera.svg"
+              alt="opera logo"
+              width="96"
+              height="100"
+            />
+            <h3 class="download-card-title">Add to Opera</h3>
+            <p class="text download-card-text">Minimum version 46</p>
+            <button class="button hover-blue">Add & Install Extension</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <h2 class="subtitle faq-title">Frequently Asked Questions</h2>
+        <p class="text faq-text">
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+
+        <div class="accordion-list">
+          <hr class="tab-separator main-tab-separator faq-separator" />
+
+          <div class="accordion-card">
+            <input type="checkbox" name="accordion" id="bookmark" />
+            <label class="hover-red" for="bookmark">What is Bookmark?</label>
+
+            <p class="accordion-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.
+            </p>
+          </div>
+
+          <div class="accordion-card">
+            <input type="checkbox" name="accordion" id="how" />
+            <label class="hover-red" for="how"
+              >How can I request a new browser?</label
+            >
+
+            <p class="accordion-text">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="accordion-card">
+            <input type="checkbox" name="accordion" id="mobile" />
+            <label class="hover-red" for="mobile">Is there a mobile app?</label>
+
+            <p class="accordion-text">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+          <div class="accordion-card">
+            <input type="checkbox" name="accordion" id="about" />
+            <label class="hover-red" for="about"
+              >What about other Chromium browsers?</label
+            >
+
+            <p class="accordion-text">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
+            </p>
+          </div>
+        </div>
+        <button class="button hover-blue faq-button">More Info</button>
+      </section>
+    </main>
+
+    <aside id="contact" class="contact">
+      <p class="contact-text">35,000+ already joined</p>
+      <h2 class="contact-title">Stay up-to-date with what we’re doing</h2>
+
+      <form>
+        <div class="input-wrapper">
+          <input
+            type="email"
+            id="email"
+            aria-label="Enter your email address"
+            placeholder="Enter your email address"
+          />
+          <i class="email-warning-icon"></i>
+          <p class="email-warning">Whoops, make shure it's an email</p>
+        </div>
+        <div class="input-wrapper">
+          <input
+            class="button submit hover-red"
+            type="submit"
+            value="Contact Us"
+            aria-label="Submit email"
+          />
+        </div>
+      </form>
+    </aside>
+
+    <footer>
+      <div class="footer-container">
+        <img
+          class="footer-logo"
+          src="./images/logo-bookmark-clear.svg"
+          alt="logo"
+          width="148"
+          height="25"
+        />
+        <ul>
+          <li><a href="#Features">Features</a></li>
+          <li><a href="#Pricing">Pricing</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-icons">
+          <a href="https://www.facebook.com" aria-label="facebok">
+            <i class="social-icon facebook"></i>
+          </a>
+          <a href="https://www.twitter.com" aria-label="twitter">
+            <i class="social-icon twitter"></i>
+          </a>
+        </div>
+
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/JonatanGarbuyo">Jonatan Garbuyo</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
