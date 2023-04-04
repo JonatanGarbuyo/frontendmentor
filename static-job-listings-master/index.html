@@ -24,16 +24,70 @@
     <title>Frontend Mentor | Job Listings</title>
   </head>
   <body>
-    <header class="bg-primary-400 primary-header">
-      <div class="container">
-        <div class="bg-neutral-100 filter"></div>
-      </div>
-    </header>
+    <header class="bg-primary-400 primary-header"></header>
 
     <main class="bg-neutral-100">
       <div class="container">
+        <div class="bg-white filter">
+          <ul
+            class="text-primary-400 filter-tag-list"
+            aria-label="filter tag list"
+          >
+            <li
+              class="bg-neutral-100 text-primary-400 fw-bold filter-tag"
+              aria-label="Frontend"
+            >
+              <p>Frontend</p>
+              <button class="bg-primary-400 text-white remove">
+                <img
+                  src="./images/icon-remove.svg"
+                  alt="remove tag"
+                  width="14"
+                  height="14"
+                />
+              </button>
+            </li>
+            <li
+              class="bg-neutral-100 text-primary-400 fw-bold filter-tag"
+              aria-label="Frontend"
+            >
+              <p>CSS</p>
+              <button class="bg-primary-400 text-white remove">
+                <img
+                  src="./images/icon-remove.svg"
+                  alt="remove tag"
+                  width="14"
+                  height="14"
+                />
+              </button>
+            </li>
+            <li
+              class="bg-neutral-100 text-primary-400 fw-bold filter-tag"
+              aria-label="Frontend"
+            >
+              <p>JavaScript</p>
+              <button class="bg-primary-400 text-white remove">
+                <img
+                  src="./images/icon-remove.svg"
+                  alt="remove tag"
+                  width="14"
+                  height="14"
+                />
+              </button>
+            </li>
+          </ul>
+          <button
+            class="text-neutral-500 fw-bold clear"
+            aria-label="clear tags"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <div class="container">
         <div class="card-list">
-          <div class="fw-bold card featured">
+          <div class="bg-white fw-bold card featured">
             <img
               class="card-image"
               src="./images/photosnap.svg"
@@ -63,26 +117,38 @@
                 <li>USA only</li>
               </ul>
             </div>
-            <div class="text-primary-400 tag-list">
-              <span class="bg-neutral-100 text-primary-400 tag role">
+            <ul class="text-primary-400 tag-list" aria-label="tag list">
+              <li class="bg-neutral-100 text-primary-400 tag" aria-label="role">
                 Frontend
-              </span>
-              <span class="bg-neutral-100 text-primary-400 tag level">
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="level"
+              >
                 Senior
-              </span>
-              <span class="bg-neutral-100 text-primary-400 tag laguage">
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="laguage"
+              >
                 HTML
-              </span>
-              <span class="bg-neutral-100 text-primary-400 tag laguage">
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="laguage"
+              >
                 CSS
-              </span>
-              <span class="bg-neutral-100 text-primary-400 tag laguage">
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="laguage"
+              >
                 JavaScript
-              </span>
-            </div>
+              </li>
+            </ul>
           </div>
 
-          <div class="fw-bold card featured">
+          <div class="bg-white fw-bold card featured">
             <img
               class="card-image"
               src="./images/manage.svg"
@@ -112,23 +178,32 @@
                 <li>Remote</li>
               </ul>
             </div>
-            <div class="text-primary-400 tag-list">
-              <span class="bg-neutral-100 text-primary-400 tag role"
-                >Fullstack</span
+            <ul class="text-primary-400 tag-list" aria-label="tag list">
+              <li class="bg-neutral-100 text-primary-400 tag" aria-label="role">
+                Fullstack
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="level"
               >
-              <span class="bg-neutral-100 text-primary-400 tag level"
-                >Midweight</span
+                Midweight
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="laguage"
               >
-              <span class="bg-neutral-100 text-primary-400 tag laguage"
-                >Python</span
+                Python
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="laguage"
               >
-              <span class="bg-neutral-100 text-primary-400 tag laguage"
-                >React</span
-              >
-            </div>
+                React
+              </li>
+            </ul>
           </div>
 
-          <div class="fw-bold card">
+          <div class="bg-white fw-bold card">
             <img
               class="card-image"
               src="./images/account.svg"
@@ -155,23 +230,35 @@
                 <li>USA only</li>
               </ul>
             </div>
-            <div class="text-primary-400 tag-list">
-              <span class="bg-neutral-100 text-primary-400 tag role"
-                >Frontend</span
+            <ul class="text-primary-400 tag-list" aria-label="tag list">
+              <li class="bg-neutral-100 text-primary-400 tag" aria-label="role">
+                Frontend
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="level"
               >
-              <span class="bg-neutral-100 text-primary-400 tag level"
-                >Junior</span
+                Junior
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="laguage"
               >
-              <span class="bg-neutral-100 text-primary-400 tag laguage"
-                >JavaScript</span
+                JavaScript
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="tools"
               >
-              <span class="bg-neutral-100 text-primary-400 tag tools"
-                >React</span
+                React
+              </li>
+              <li
+                class="bg-neutral-100 text-primary-400 tag"
+                aria-label="tools"
               >
-              <span class="bg-neutral-100 text-primary-400 tag tools"
-                >Sass</span
-              >
-            </div>
+                Sass
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -141,6 +141,9 @@ svg {
   color: var(--color-neutral-700);
 }
 
+.bg-white {
+  background-color: var(--color-white);
+}
 .bg-primary-400 {
   background-color: var(--color-primary-400);
 }
@@ -183,19 +186,54 @@ svg {
 /* End utility classes */
 
 .container {
+  margin: auto;
   max-width: 1110px;
-  position: relative;
   padding-inline: 24px;
+  position: relative;
 }
 
 /* Header */
 .primary-header {
-  background-image: url('./images/bg-header-mobile.svg');
+  background-image: url(./images/bg-header-mobile.svg);
   min-height: 156px;
 }
 
 .filter {
-  border-radius: 10px;
+  display: grid;
+  border-radius: 5px;
+  position: relative;
+  top: -36px;
+  margin-bottom: -36px;
+  grid-template-columns: 1fr auto;
+  padding: 20px;
+}
+.filter-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.filter-tag {
+  display: flex;
+  border-radius: 5px;
+  list-style: none;
+  overflow: hidden;
+  align-items: center;
+}
+.filter-tag p {
+  margin: 8px;
+  margin-right: 12px;
+}
+.remove {
+  border: none;
+  height: 32px;
+  width: 32px;
+  padding: 10px;
+}
+.clear {
+  font-size: var(--font-size-500);
+  /* display: none; */
+  border: none;
+  background: none;
 }
 
 /* Main */
@@ -212,12 +250,14 @@ main {
 }
 
 .card {
-  background-color: var(--color-white);
+  align-items: center;
   border-left: 5px solid var(--color-white);
   border-radius: 5px;
   box-shadow: var(--color-primary-400) 0px 6px 14px -12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   padding-bottom: 6px;
   padding-inline: 18px;
   padding-top: 32px;
@@ -238,6 +278,7 @@ main {
 
 .card-content {
   border-bottom: 1px solid var(--color-neutral-300);
+  flex-grow: 1;
 }
 
 .name {
@@ -279,8 +320,10 @@ li:first-child {
   padding-block: 16px;
 }
 .tag {
+  border-radius: 5px;
   display: inline-block;
   height: 32px;
+  list-style: none;
   padding: 10px;
 }
 
