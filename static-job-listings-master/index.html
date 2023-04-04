@@ -1,193 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Job Listings</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Senior
-  <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
-  <!-- Item End -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Item Start -->
-  Manage
-  New!
-  Featured
-  Fullstack Developer
-  1d ago
-  Part Time
-  Remote
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  Python
-  <!-- Tools -->
-  React
-  <!-- Item End -->
+    <title>Frontend Mentor | Job Listings</title>
+  </head>
+  <body>
+    <header class="bg-primary-400 primary-header">
+      <div class="container">
+        <div class="bg-neutral-100 filter"></div>
+      </div>
+    </header>
 
-  <!-- Item Start -->
-  Account
-  New!
-  Junior Frontend Developer
-  2d ago
-  Part Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
+    <main class="bg-neutral-100">
+      <div class="container">
+        <div class="card-list">
+          <div class="fw-bold card featured">
+            <img
+              class="card-image"
+              src="./images/photosnap.svg"
+              alt="Photosnap"
+            />
+            <div class="text-neutral-500 card-content">
+              <span class="fs-secondary-heading text-primary-400 name"
+                >Photosnap</span
+              >
+              <span>
+                <span
+                  class="bg-primary-400 fs-text text-white fw-regular badge new"
+                  >New!</span
+                >
+                <span class="bg-neutral-700 fs-text text-white fw-regular badge"
+                  >Featured</span
+                >
+              </span>
+              <h2
+                class="fs-primary-heading fw-bold text-neutral-700 card-title"
+              >
+                Senior Frontend Developer
+              </h2>
+              <ul class="fw-regular">
+                <li>1d ago</li>
+                <li>Full Time</li>
+                <li>USA only</li>
+              </ul>
+            </div>
+            <div class="text-primary-400 tag-list">
+              <span class="bg-neutral-100 text-primary-400 tag role">
+                Frontend
+              </span>
+              <span class="bg-neutral-100 text-primary-400 tag level">
+                Senior
+              </span>
+              <span class="bg-neutral-100 text-primary-400 tag laguage">
+                HTML
+              </span>
+              <span class="bg-neutral-100 text-primary-400 tag laguage">
+                CSS
+              </span>
+              <span class="bg-neutral-100 text-primary-400 tag laguage">
+                JavaScript
+              </span>
+            </div>
+          </div>
 
-  <!-- Item Start -->
-  MyHome
-  Junior Frontend Developer
-  5d ago
-  Contract
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  CSS
-  JavaScript
-  <!-- Item End -->
+          <div class="fw-bold card featured">
+            <img
+              class="card-image"
+              src="./images/manage.svg"
+              alt="Manage logo"
+            />
+            <div class="text-neutral-500 card-content">
+              <span class="fs-secondary-heading text-primary-400 name"
+                >Manage</span
+              >
+              <span>
+                <span
+                  class="bg-primary-400 fs-text text-white fw-regular badge new"
+                  >New!</span
+                >
+                <span class="bg-neutral-700 fs-text text-white fw-regular badge"
+                  >Featured</span
+                >
+              </span>
+              <h2
+                class="fs-primary-heading fw-bold text-neutral-700 card-title"
+              >
+                Fullstack Developer
+              </h2>
+              <ul class="fw-regular">
+                <li>1d ago</li>
+                <li>Part Time</li>
+                <li>Remote</li>
+              </ul>
+            </div>
+            <div class="text-primary-400 tag-list">
+              <span class="bg-neutral-100 text-primary-400 tag role"
+                >Fullstack</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag level"
+                >Midweight</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag laguage"
+                >Python</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag laguage"
+                >React</span
+              >
+            </div>
+          </div>
 
-  <!-- Item Start -->
-  Loop Studios
-  Software Engineer
-  1w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Ruby
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
+          <div class="fw-bold card">
+            <img
+              class="card-image"
+              src="./images/account.svg"
+              alt="Account logo"
+            />
+            <div class="text-neutral-500 card-content">
+              <span class="fs-secondary-heading text-primary-400 name"
+                >Account</span
+              >
+              <span>
+                <span
+                  class="bg-primary-400 fs-text text-white fw-regular badge new"
+                  >New!</span
+                >
+              </span>
+              <h2
+                class="fs-primary-heading fw-bold text-neutral-700 card-title"
+              >
+                Junior Frontend Developer
+              </h2>
+              <ul class="fw-regular">
+                <li>2d ago</li>
+                <li>Part Time</li>
+                <li>USA only</li>
+              </ul>
+            </div>
+            <div class="text-primary-400 tag-list">
+              <span class="bg-neutral-100 text-primary-400 tag role"
+                >Frontend</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag level"
+                >Junior</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag laguage"
+                >JavaScript</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag tools"
+                >React</span
+              >
+              <span class="bg-neutral-100 text-primary-400 tag tools"
+                >Sass</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  <!-- Item Start -->
-  FaceIt
-  Junior Backend Developer
-  2w ago
-  Full Time
-  UK only
-  <!-- Role -->
-  Backend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  Ruby
-  <!-- Tools -->
-  RoR
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Shortly
-  Junior Developer
-  2w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  HTML
-  JavaScript
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Insure
-  Junior Frontend Developer
-  2w ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  Vue
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Eyecam Co.
-  Full Stack Engineer
-  3w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Python
-  <!-- Tools -->
-  Django
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  The Air Filter Company
-  Front-end Dev
-  1mo ago
-  Part Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer
+      class="bg-primary-400 fs-secondary-heading fw-regular text-neutral-700"
+    >
+      <div class="attribution">
+        Challenge by
+        <a
+          class="text-neutral-700"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a class="text-neutral-700" href="https://github.com/JonatanGarbuyo"
+          >Jonatan Garbuyo</a
+        >.
+      </div>
+    </footer>
+  </body>
 </html>
