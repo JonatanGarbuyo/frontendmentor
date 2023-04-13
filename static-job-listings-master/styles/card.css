@@ -1,5 +1,4 @@
 /* Cards */
-
 .card {
   align-items: center;
   border-left: 5px solid var(--color-white);
@@ -53,6 +52,10 @@
 .card-title {
   margin-block: 14px;
 }
+.card-title:hover {
+  color: var(--color-primary-400);
+  cursor: pointer;
+}
 
 .card-content ul {
   display: flex;
@@ -73,9 +76,13 @@ li:first-child {
 .tag {
   border-radius: 4px;
   display: inline-block;
-  /* height: 32px; */
   list-style: none;
   padding: 10px;
+  cursor: pointer;
+}
+.tag:hover {
+  background-color: var(--color-primary-400);
+  color: var(--color-neutral-100);
 }
 
 @media (min-width: 768px) {
@@ -83,9 +90,12 @@ li:first-child {
     border-bottom: 1px solid transparent;
   }
 }
+
 @media (min-width: 1024px) {
   .card {
-    padding-block: 30px;
+    padding-block: 22px;
+    padding-right: 40px;
+    padding-left: 10px;
   }
   .card-image {
     position: static;

@@ -27,7 +27,7 @@
   --font-size-300: 0.875rem;
   --font-size-400: 0.9375rem;
   --font-size-500: 1rem;
-  --font-size-600: 1.6rem;
+  --font-size-600: 1.4rem;
   --font-size-700: 2.5rem;
   --font-size-800: 3.5rem;
 
@@ -43,6 +43,14 @@
 @media (min-width: 768px) {
   :root {
     --font-size-primary-heading: var(--font-size-500);
+    --font-size-secondary-heading: var(--font-size-500);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-primary-heading: var(--font-size-600);
+    /* --font-size-secondary-heading: var(--font-size-600); */
   }
 }
 
@@ -59,6 +67,11 @@
   min-height: 156px;
 }
 
+.hide-filter {
+  height: 0;
+  overflow: hidden;
+}
+
 .filter {
   display: grid;
   border-radius: 5px;
@@ -68,33 +81,22 @@
   grid-template-columns: 1fr auto;
   padding: 20px;
 }
+
 .filter-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
-.filter-tag {
-  display: flex;
-  border-radius: 5px;
-  list-style: none;
-  overflow: hidden;
-  align-items: center;
-}
-.filter-tag p {
-  margin: 8px;
-  margin-right: 12px;
-}
-.remove {
-  border: none;
-  height: 32px;
-  width: 32px;
-  padding: 9px;
-}
+
 .clear {
   font-size: var(--font-size-500);
-  /* display: none; */
   border: none;
   background: none;
+  cursor: pointer;
+}
+.clear:hover {
+  color: var(--color-primary-400);
+  text-decoration: underline;
 }
 
 .card-list {
@@ -121,4 +123,26 @@ footer {
 
 .attribution a:hover {
   color: var(--color-neutral-100);
+}
+
+@media (min-width: 768px) {
+  .primary-header {
+    background-image: url('../images/bg-header-desktop.svg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .filter {
+    padding-inline: 40px;
+  }
+  .card-list {
+    padding-block: 38px;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-inline: unset;
+  }
 }

@@ -20,4 +20,9 @@
   height: 32px;
   width: 32px;
   padding: 9px;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background-color: var(--color-neutral-700);
 }

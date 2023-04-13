@@ -19,7 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/utility.css" />
+    <script src="./app.js" type="module"></script>
 
     <title>Frontend Mentor | Job Listings</title>
   </head>
@@ -27,58 +30,17 @@
     <header class="bg-primary-400 primary-header"></header>
 
     <main class="bg-neutral-100">
-      <div class="container">
+      <div class="container" id="filter-container">
         <div class="bg-white filter">
           <ul
+            id="filter-tag-list"
             class="text-primary-400 filter-tag-list"
             aria-label="filter tag list"
-          >
-            <li
-              class="bg-neutral-100 text-primary-400 fw-bold filter-tag"
-              aria-label="Frontend"
-            >
-              <p>Frontend</p>
-              <button class="bg-primary-400 text-white remove">
-                <img
-                  src="./images/icon-remove.svg"
-                  alt="remove tag"
-                  width="14"
-                  height="14"
-                />
-              </button>
-            </li>
-            <li
-              class="bg-neutral-100 text-primary-400 fw-bold filter-tag"
-              aria-label="Frontend"
-            >
-              <p>CSS</p>
-              <button class="bg-primary-400 text-white remove">
-                <img
-                  src="./images/icon-remove.svg"
-                  alt="remove tag"
-                  width="14"
-                  height="14"
-                />
-              </button>
-            </li>
-            <li
-              class="bg-neutral-100 text-primary-400 fw-bold filter-tag"
-              aria-label="Frontend"
-            >
-              <p>JavaScript</p>
-              <button class="bg-primary-400 text-white remove">
-                <img
-                  src="./images/icon-remove.svg"
-                  alt="remove tag"
-                  width="14"
-                  height="14"
-                />
-              </button>
-            </li>
-          </ul>
+          ></ul>
           <button
             class="text-neutral-500 fw-bold clear"
             aria-label="clear tags"
+            id="clear"
           >
             Clear
           </button>
@@ -86,181 +48,7 @@
       </div>
 
       <div class="container">
-        <div class="card-list">
-          <div class="bg-white fw-bold card featured">
-            <img
-              class="card-image"
-              src="./images/photosnap.svg"
-              alt="Photosnap"
-            />
-            <div class="text-neutral-500 card-content">
-              <span class="fs-secondary-heading text-primary-400 name"
-                >Photosnap</span
-              >
-              <span>
-                <span
-                  class="bg-primary-400 fs-text text-white fw-regular badge new"
-                  >New!</span
-                >
-                <span class="bg-neutral-700 fs-text text-white fw-regular badge"
-                  >Featured</span
-                >
-              </span>
-              <h2
-                class="fs-primary-heading fw-bold text-neutral-700 card-title"
-              >
-                Senior Frontend Developer
-              </h2>
-              <ul class="fw-regular">
-                <li>1d ago</li>
-                <li>Full Time</li>
-                <li>USA only</li>
-              </ul>
-            </div>
-            <ul class="text-primary-400 tag-list" aria-label="tag list">
-              <li class="bg-neutral-100 text-primary-400 tag" aria-label="role">
-                Frontend
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="level"
-              >
-                Senior
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="laguage"
-              >
-                HTML
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="laguage"
-              >
-                CSS
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="laguage"
-              >
-                JavaScript
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-white fw-bold card featured">
-            <img
-              class="card-image"
-              src="./images/manage.svg"
-              alt="Manage logo"
-            />
-            <div class="text-neutral-500 card-content">
-              <span class="fs-secondary-heading text-primary-400 name"
-                >Manage</span
-              >
-              <span>
-                <span
-                  class="bg-primary-400 fs-text text-white fw-regular badge new"
-                  >New!</span
-                >
-                <span class="bg-neutral-700 fs-text text-white fw-regular badge"
-                  >Featured</span
-                >
-              </span>
-              <h2
-                class="fs-primary-heading fw-bold text-neutral-700 card-title"
-              >
-                Fullstack Developer
-              </h2>
-              <ul class="fw-regular">
-                <li>1d ago</li>
-                <li>Part Time</li>
-                <li>Remote</li>
-              </ul>
-            </div>
-            <ul class="text-primary-400 tag-list" aria-label="tag list">
-              <li class="bg-neutral-100 text-primary-400 tag" aria-label="role">
-                Fullstack
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="level"
-              >
-                Midweight
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="laguage"
-              >
-                Python
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="laguage"
-              >
-                React
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-white fw-bold card">
-            <img
-              class="card-image"
-              src="./images/account.svg"
-              alt="Account logo"
-            />
-            <div class="text-neutral-500 card-content">
-              <span class="fs-secondary-heading text-primary-400 name"
-                >Account</span
-              >
-              <span>
-                <span
-                  class="bg-primary-400 fs-text text-white fw-regular badge new"
-                  >New!</span
-                >
-              </span>
-              <h2
-                class="fs-primary-heading fw-bold text-neutral-700 card-title"
-              >
-                Junior Frontend Developer
-              </h2>
-              <ul class="fw-regular">
-                <li>2d ago</li>
-                <li>Part Time</li>
-                <li>USA only</li>
-              </ul>
-            </div>
-            <ul class="text-primary-400 tag-list" aria-label="tag list">
-              <li class="bg-neutral-100 text-primary-400 tag" aria-label="role">
-                Frontend
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="level"
-              >
-                Junior
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="laguage"
-              >
-                JavaScript
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="tools"
-              >
-                React
-              </li>
-              <li
-                class="bg-neutral-100 text-primary-400 tag"
-                aria-label="tools"
-              >
-                Sass
-              </li>
-            </ul>
-          </div>
-        </div>
+        <ul class="card-list" id="job-offers-list"></ul>
       </div>
     </main>
 
