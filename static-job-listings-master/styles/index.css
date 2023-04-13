@@ -1,0 +1,148 @@
+/* Style guide definitions */
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  /* Desaturated Dark Cyan:  */
+  --color-primary-400: hsl(180, 29%, 50%);
+  /* Desaturated Dark Cyan:  */
+  --color-accent-400: hsl(180, 29%, 50%);
+
+  /* Light Grayish Cyan (Background) */
+  --color-neutral-100: hsl(180, 52%, 96%);
+  /* Light Grayish Cyan (Filter Tablets):  */
+  --color-neutral-200: hsl(180, 31%, 95%);
+  /*  */
+  --color-neutral-300: hsl(140, 2%, 75%);
+  /* Dark Grayish Cyan: */
+  --color-neutral-500: hsl(180, 8%, 52%);
+  /* Very Dark Grayish Cyan:  */
+  --color-neutral-700: hsl(180, 14%, 20%);
+
+  --font-family-primary: 'League Spartan', sans-serif;
+  --font-family-body: var(--font-family-primary);
+  --font-family-heading: var(--font-family-primary);
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+
+  --font-size-300: 0.875rem;
+  --font-size-400: 0.9375rem;
+  --font-size-500: 1rem;
+  --font-size-600: 1.4rem;
+  --font-size-700: 2.5rem;
+  --font-size-800: 3.5rem;
+
+  --font-size-header: var(--font-size-500);
+  --font-size-body: var(--font-size-500);
+  --font-size-footer: var(--font-size-500);
+  --font-size-primary-heading: var(--font-size-400);
+  --font-size-secondary-heading: var(--font-size-400);
+  --font-size-button: var(--font-size-500);
+  --font-size-tag: var(--font-size-500);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-primary-heading: var(--font-size-500);
+    --font-size-secondary-heading: var(--font-size-500);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-primary-heading: var(--font-size-600);
+    /* --font-size-secondary-heading: var(--font-size-600); */
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 1110px;
+  padding-inline: 24px;
+  position: relative;
+}
+
+/* Header */
+.primary-header {
+  background-image: url('../images/bg-header-mobile.svg');
+  min-height: 156px;
+}
+
+.hide-filter {
+  height: 0;
+  overflow: hidden;
+}
+
+.filter {
+  display: grid;
+  border-radius: 5px;
+  position: relative;
+  top: -36px;
+  margin-bottom: -36px;
+  grid-template-columns: 1fr auto;
+  padding: 20px;
+}
+
+.filter-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.clear {
+  font-size: var(--font-size-500);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.clear:hover {
+  color: var(--color-primary-400);
+  text-decoration: underline;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-block: 56px;
+}
+
+/* Main */
+main {
+  flex-grow: 1;
+}
+
+/* Footer */
+footer {
+  min-height: 50px;
+  padding: 10px;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution a:hover {
+  color: var(--color-neutral-100);
+}
+
+@media (min-width: 768px) {
+  .primary-header {
+    background-image: url('../images/bg-header-desktop.svg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .filter {
+    padding-inline: 40px;
+  }
+  .card-list {
+    padding-block: 38px;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-inline: unset;
+  }
+}
