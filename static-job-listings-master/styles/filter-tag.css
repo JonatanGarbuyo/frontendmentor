@@ -1,0 +1,23 @@
+.filter-tag {
+  display: flex;
+  border-radius: 5px;
+  list-style: none;
+  overflow: hidden;
+  align-items: center;
+}
+
+.filter-tag p {
+  margin: 8px;
+  margin-right: 12px;
+}
+
+.remove {
+  background-image: url('../images/icon-remove.svg');
+  background-size: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  height: 32px;
+  width: 32px;
+  padding: 9px;
+}
