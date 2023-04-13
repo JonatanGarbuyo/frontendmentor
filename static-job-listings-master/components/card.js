@@ -14,6 +14,23 @@ class jobOfferCard extends HTMLElement {
     this.render()
   }
 
+  disconnectedCallback() {
+    this.tagList.forEach((tag) => {
+      tag.removeEventListener('click', this.handleClick)
+    })
+  }
+
+  handleClick(e) {
+    if (e.type === 'click') {
+      const event = new CustomEvent('add-filter-tag', {
+        detail: { tagName: e.target.innerText },
+        bubbles: true,
+        composed: true,
+      })
+      this.dispatchEvent(event)
+    }
+  }
+
   render() {
     const template = document.createElement('template')
     template.innerHTML = `
@@ -25,6 +42,10 @@ class jobOfferCard extends HTMLElement {
       })}
     `
     this._root.appendChild(template.content.cloneNode(true))
+    this.tagList = this._root.querySelectorAll('.tag-list li')
+    this.tagList.forEach((tag) => {
+      tag.addEventListener('click', this.handleClick)
+    })
   }
 }
 
