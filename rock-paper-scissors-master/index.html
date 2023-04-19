@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" type="module"></script>
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img
+          id="header-logo"
+          src="./images/logo.svg"
+          width="162"
+          height="99"
+          alt="Logo"
+        />
+
+        <label class="switch">
+          <input id="extended" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+
+        <div class="score">
+          <p class="text score-title">score</p>
+          <p id="score" class="score-number"></p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="choices" class="choices"></div>
+      <div class="control">
+        <button id="rules-button" class="text rules-button">Rules</button>
+        <button id="reset-button" class="text reset-button">Reset</button>
+      </div>
+
+      <div class="rules-modal">
+        <div class="rules-modal-container">
+          <h1>Rules</h1>
+          <img
+            id="image-rules"
+            src="./images/image-rules.svg"
+            width="304"
+            height="270"
+            alt="rules"
+          />
+          <button class="close-modal"></button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/JonatanGarbuyo">Jonatan Garbuyo</a>.
+      </div>
+    </footer>
+  </body>
+</html>
