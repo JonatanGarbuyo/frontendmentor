@@ -26,11 +26,11 @@
   </head>
   <body>
     <header>
-      <div class="header container">
+      <div id="header-container" class="header container">
         <h1 class="header-title">Where in the world?</h1>
-        <button>Dark Mode switch</button>
       </div>
     </header>
+
     <div class="filter container">
       <form action="#">
         <label for="search" class="search">
@@ -43,16 +43,17 @@
           />
         </label>
       </form>
-
-      <select id="region-select" class="region-select">
-        <!-- <option value="0">Filter by Region</option> -->
-        <option value="Africa">Africa</option>
-        <option value="America">America</option>
-        <option value="Asia">Asia</option>
-        <option value="Europa">Europe</option>
-        <option value="Oceania">Oceania</option>
-      </select>
-      <label for="region-list">Filter by Region</label>
+      <label for="region-list">
+        Filter by Region
+        <select id="region-select" class="region-select">
+          <!-- <option value="0">Filter by Region</option> -->
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europa">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </label>
     </div>
     <main class="country-list">
       <div class="country-card">
