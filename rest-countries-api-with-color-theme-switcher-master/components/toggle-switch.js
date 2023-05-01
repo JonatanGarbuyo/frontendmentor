@@ -4,8 +4,55 @@ class ToggleSwitch extends HTMLElement {
     this._root = this.attachShadow({ mode: 'closed' })
   }
 
+  set isChecked(boolean) {
+    console.log('ischecked')
+    this._isChecked = boolean
+    this.render()
+  }
+
   async connectedCallback() {
     this.render()
+  }
+
+  handleClick(e) {
+    console.log('handleClick', e)
+    if (e.type === 'click') {
+      const event = new CustomEvent('toggle-dark-mode', {
+        detail: { isChecked: this._isChecked },
+        bubbles: true,
+        composed: true,
+      })
+      this.dispatchEvent(event)
+    }
+  }
+
+  render() {
+    const template = document.createElement('template')
+    template.innerHTML = /*HTML*/ `
+      ${this.style}
+      <label class="switch">
+      <input type="checkbox"  id="switch" ${this._isChecked ? 'checked' : ''}/>
+      <div class="stars">
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+        <span class="star">✦</span>
+      </div>
+      <div class="clouds"></div>
+      <div class="slider"></div>
+      <span class="sun-container"></span>
+    </label>
+    `
+    this._root.replaceChildren(template.content.cloneNode(true))
+    this.toggleDarkMode = this._root.getElementById(`switch`)
+    this.toggleDarkMode.addEventListener('click', this.handleClick)
   }
 
   get style() {
@@ -275,33 +322,6 @@ class ToggleSwitch extends HTMLElement {
         }
       </style>
   `
-  }
-
-  render() {
-    const template = document.createElement('template')
-    template.innerHTML = /*HTML*/ `
-      ${this.style}
-      <label class="switch">
-      <input type="checkbox" />
-      <div class="stars">
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-        <span class="star">✦</span>
-      </div>
-      <div class="clouds"></div>
-      <div class="slider"></div>
-      <span class="sun-container"></span>
-    </label>
-    `
-    this._root.replaceChildren(template.content.cloneNode(true))
   }
 }
 
