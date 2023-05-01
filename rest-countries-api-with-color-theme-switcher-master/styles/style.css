@@ -3,18 +3,18 @@
   --color-neutral-dark-blue: hsl(209, 23%, 22%);
   /* (Dark Mode Background) */
   --color-neutral-very-dark-blue: hsl(207, 26%, 17%);
-
-  /* (Light Mode Text) */
-  --color-neutral-very-dark-blue: hsl(200, 15%, 8%);
   /* (Light Mode Input) */
   --color-neutral-dark-gray: hsl(0, 0%, 52%);
 
-  --color-neutral-light-graycolor: hsl(0, 0%, 94%);
+  --color-neutral-light-gray: hsl(0, 0%, 94%);
 
   /* (Light Mode Background) */
   --color-neutral-very-light-gray: hsl(0, 0%, 98%);
+
   /* (Dark Mode Text & Light Mode Elements) */
-  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-white: hsl(0, 0%, 100%);
+  /* (Light Mode Text) */
+  --color-black: hsl(200, 15%, 8%);
 
   --font-size-400: 0.875rem;
   --font-size-500: 1rem;
@@ -24,30 +24,43 @@
   --font-weight-regular: 600;
   --font-weight-bold: 800;
 
-  --bg-color-100: var(--color-neutral-white);
-  --bg-color-200: var(--color-neutral-very-light-gray);
+  --bg-color-primary: var(--color-white);
+  --bg-color-secondary: var(--color-neutral-very-light-gray);
 
-  --text-color-100: var(--color-neutral-dark-gray);
-  --text-color-500: var(--color-neutral-very-dark-blue);
+  --text-color-primary: var(--color-black);
+  --text-color-secondary: var(--color-neutral-dark-gray);
 
-  --box-shadow: var(--color-neutral-light-graycolor);
+  --box-shadow: var(--color-neutral-light-gray);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([theme='light']) {
+    --bg-color-primary: var(--color-neutral-dark-blue);
+    --bg-color-secondary: var(--color-neutral-very-dark-blue);
+
+    --text-color-primary: var(--color-white);
+    --text-color-secondary: var(--color-neutral-light-gray);
+
+    --box-shadow: var(--color-neutral-light-gray);
+  }
 }
 
 body {
-  color: var(--text-color-500);
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-primary);
   display: flex;
   font-family: 'Nunito Sans', sans-serif;
   font-size: var(--font-size-400);
 }
 
 header {
-  background-color: var(--bg-color-100);
+  background-color: var(--bg-color-primary);
   box-shadow: 0 0 5px var(--box-shadow);
   min-height: 80px;
 }
 
 main {
-  background-color: var(--bg-color-200);
+  background-color: var(--bg-color-secondary);
   flex-grow: 1;
 }
 
@@ -69,6 +82,7 @@ main {
 
 .filter {
   align-items: center;
+  background-color: var(--bg-color-secondary);
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -118,6 +132,8 @@ main {
 }
 
 .country-card {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
   border-radius: 4px;
   box-shadow: 0 0 5px var(--box-shadow);
   display: flex;
@@ -125,6 +141,7 @@ main {
   /* max-height: 336px; */
   max-width: 264px;
   overflow: hidden;
+  font-weight: var(--font-weight-regular);
 }
 
 .country-card img {
@@ -147,12 +164,12 @@ main {
 }
 
 .country-card span {
-  color: var(--text-color-100);
+  color: var(--text-color-secondary);
 }
 
 /* Footer */
 footer {
-  color: var(--text-color-500);
+  color: var(--text-color-secondary);
   padding-block: 24px;
 }
 
