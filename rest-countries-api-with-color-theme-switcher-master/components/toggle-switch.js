@@ -5,7 +5,6 @@ class ToggleSwitch extends HTMLElement {
   }
 
   set isChecked(boolean) {
-    console.log('ischecked')
     this._isChecked = boolean
     this.render()
   }
@@ -15,7 +14,6 @@ class ToggleSwitch extends HTMLElement {
   }
 
   handleClick(e) {
-    console.log('handleClick', e)
     if (e.type === 'click') {
       const event = new CustomEvent('toggle-dark-mode', {
         detail: { isChecked: this._isChecked },

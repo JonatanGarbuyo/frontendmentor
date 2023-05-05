@@ -10,7 +10,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./images/favicon-32x32.png?fixbug=icon"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,17 +43,14 @@
           />
         </label>
       </form>
-      <label for="region-list">
-        Filter by Region
-        <select id="region-select" class="region-select">
-          <!-- <option value="0">Filter by Region</option> -->
-          <option value="Africa">Africa</option>
-          <option value="America">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europa">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
-      </label>
+      <fm-custom-select>
+        <option value="title">Filter by Region:</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europa">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </fm-custom-select>
     </div>
     <main class="country-list">
       <div class="country-card">
@@ -65,9 +62,15 @@
         />
         <h2 class="country-name">Germany</h2>
         <ul class="country-props" role="list">
-          <li role="list">Population: <span>81.770.900</span></li>
-          <li role="list">Region: <span>Europe</span></li>
-          <li role="list">Capital: <span>Berlin</span></li>
+          <li role="list">
+            <p>Population: <span>81.770.900</span></p>
+          </li>
+          <li role="list">
+            <p>Region: <span>Europe</span></p>
+          </li>
+          <li role="list">
+            <p>Capital: <span>Berlin</span></p>
+          </li>
         </ul>
       </div>
 
