@@ -1,6 +1,5 @@
 const SELECT_TEMPLATE = /*HTML*/ `
     <style>
-
       * {
         box-sizing: border-box;
         margin: 0;
@@ -15,14 +14,13 @@ const SELECT_TEMPLATE = /*HTML*/ `
       ul{
         background-color: var(--bg-color-primary);
         border-radius: 4px;
-        display:none;
+        display: none;
         list-style: none;
         margin-top: 4px;
         padding-block: 8px;
         position: absolute;
         width: 200px;
         z-index: 1;
-
       }
 
       li {
