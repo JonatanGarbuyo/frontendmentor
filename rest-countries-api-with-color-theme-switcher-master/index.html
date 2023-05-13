@@ -28,10 +28,11 @@
     <header>
       <div id="header-container" class="header container">
         <h1 class="header-title">Where in the world?</h1>
+        <fm-toggle-switch id="toggle-theme"></fm-toggle-switch>
       </div>
     </header>
-
-    <div class="filter container">
+    <!-- search input filter -->
+    <div id="filter-container" class="filter container">
       <label for="search" class="search">
         <i class="search-icon"></i>
         <input
@@ -44,48 +45,15 @@
       <fm-custom-select>
         <option value="title">Filter by Region:</option>
         <option value="Africa">Africa</option>
-        <option value="America">America</option>
+        <option value="Americas">America</option>
         <option value="Asia">Asia</option>
-        <option value="Europa">Europe</option>
+        <option value="Europe">Europe</option>
         <option value="Oceania">Oceania</option>
       </fm-custom-select>
     </div>
-    <main class="country-list">
-      <div class="country-card">
-        <img
-          src="https://flagcdn.com/w320/de.png"
-          alt="Germany flag"
-          width="264"
-          height="160"
-        />
-        <h2 class="country-name">Germany</h2>
-        <ul class="country-props" role="list">
-          <li role="list">
-            <p>Population: <span>81.770.900</span></p>
-          </li>
-          <li role="list">
-            <p>Region: <span>Europe</span></p>
-          </li>
-          <li role="list">
-            <p>Capital: <span>Berlin</span></p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="country-card">
-        <img
-          src="https://flagcdn.com/w320/us.png"
-          alt="United States of America"
-          width="264"
-          height="160"
-        />
-        <h2 class="country-name">Afghanistan</h2>
-        <ul class="country-props" role="list">
-          <li role="list">Population:</li>
-          <li role="list">Region:</li>
-          <li role="list">Capital:</li>
-        </ul>
-      </div>
+    <main>
+      <div id="country-detail" class="country-detail"></div>
+      <div id="countries-list" class="countries-list"></div>
     </main>
     <footer>
       <div class="attribution">
