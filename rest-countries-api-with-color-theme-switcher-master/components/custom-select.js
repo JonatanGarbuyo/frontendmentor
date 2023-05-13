@@ -61,6 +61,13 @@ const SELECT_TEMPLATE = /*HTML*/ `
         top: 2px;
         right: 12px;
       }
+
+      
+      /* Media queries  */
+      @media (min-width: 768px) {
+        label {
+          font-size: 14px;
+        }
     </style>
 
     <label>
