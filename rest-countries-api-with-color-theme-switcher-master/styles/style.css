@@ -1,0 +1,189 @@
+:root {
+  /* (Dark Mode Elements) */
+  --color-neutral-dark-blue: hsl(209, 23%, 22%);
+  /* (Dark Mode Background) */
+  --color-neutral-very-dark-blue: hsl(207, 26%, 17%);
+  /* (Light Mode Input) */
+  --color-neutral-dark-gray: hsl(0, 0%, 52%);
+
+  --color-neutral-light-gray: hsl(0, 0%, 94%);
+
+  /* (Light Mode Background) */
+  --color-neutral-very-light-gray: hsl(0, 0%, 98%);
+
+  /* (Dark Mode Text & Light Mode Elements) */
+  --color-white: hsl(0, 0%, 100%);
+  /* (Light Mode Text) */
+  --color-black: hsl(200, 15%, 8%);
+
+  --font-size-300: 0.75rem;
+  --font-size-400: 0.875rem;
+  --font-size-500: 1rem;
+  --font-size-600: 1.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 600;
+  --font-weight-bold: 800;
+
+  --bg-color-primary: var(--color-white);
+  --bg-color-secondary: var(--color-neutral-very-light-gray);
+
+  --text-color-primary: var(--color-black);
+  --text-color-secondary: var(--color-neutral-dark-gray);
+
+  --input-color: var(--color-neutral-dark-gray);
+
+  --box-shadow: var(--color-neutral-light-gray);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([theme='light']) {
+    --bg-color-primary: var(--color-neutral-dark-blue);
+    --bg-color-secondary: var(--color-neutral-very-dark-blue);
+
+    --text-color-primary: var(--color-white);
+    --text-color-secondary: var(--color-neutral-light-gray);
+
+    --input-color: var(--color-neutral-light-gray);
+
+    --box-shadow: var(--color-neutral-dark-blue);
+  }
+}
+
+body {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-primary);
+  display: flex;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: var(--font-size-400);
+}
+
+header {
+  background-color: var(--bg-color-primary);
+  box-shadow: 0 0 5px var(--box-shadow);
+  min-height: 80px;
+}
+
+main {
+  background-color: var(--bg-color-secondary);
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  height: 100%;
+  padding-inline: 16px;
+}
+
+.header-title {
+  font-size: var(--font-size-400);
+}
+
+.filter {
+  align-items: center;
+  background-color: var(--bg-color-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-inline: 16px;
+}
+
+.search {
+  margin-block: 20px;
+  position: relative;
+}
+
+.search-icon {
+  -webkit-mask-image: url('../images/search.svg');
+  -webkit-mask-size: cover;
+  background: var(--text-color-primary);
+  display: inline-block;
+  height: 16px;
+  left: 32px;
+  mask-image: url('../images/search.svg');
+  mask-size: cover;
+  position: absolute;
+  top: 22px;
+  width: 16px;
+}
+
+.search-input {
+  background-color: var(--bg-color-primary);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 5px var(--box-shadow);
+  color: var(--text-color-primary);
+  font-family: 'Nunito Sans', sans-serif;
+  height: 48px;
+  margin-block: 6px;
+  min-width: 343px;
+  outline: none;
+  padding-inline: 75px;
+}
+
+.search-input::placeholder {
+  color: var(--input-color);
+  font-size: var(--font-size-300);
+}
+
+/* Select */
+.region-select {
+  border: none;
+  box-shadow: 0 0 5px var(--box-shadow);
+  height: 48px;
+  outline: none;
+  width: 200px;
+}
+
+/* Body */
+.countries-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-secondary);
+  padding-block: 12px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media queries  */
+@media (min-width: 768px) {
+  .header {
+    padding-inline: 80px;
+  }
+
+  .header-title {
+    font-size: var(--font-size-600);
+  }
+
+  .filter {
+    padding: 28px;
+    padding-inline: 80px;
+  }
+
+  .search-input::placeholder {
+    font-size: var(--font-size-400);
+  }
+}

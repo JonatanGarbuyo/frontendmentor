@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png?fixbug=icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="./app.js" type="module"></script>
+    <title>Frontend Mentor | REST countries API</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-container" class="header container">
+        <h1 class="header-title">Where in the world?</h1>
+        <fm-toggle-switch id="toggle-theme"></fm-toggle-switch>
+      </div>
+    </header>
+    <!-- search input filter -->
+    <div id="filter-container" class="filter container">
+      <label for="search" class="search">
+        <i class="search-icon"></i>
+        <input
+          type="text"
+          id="search"
+          class="search-input"
+          placeholder="Search for a country"
+        />
+      </label>
+      <fm-custom-select>
+        <option value="title">Filter by Region:</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </fm-custom-select>
+    </div>
+    <main>
+      <div id="country-detail" class="country-detail"></div>
+      <div id="countries-list" class="countries-list"></div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/JonatanGarbuyo" target="_blank"
+          >Jonatan Garbuyo</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>
