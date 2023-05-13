@@ -15,7 +15,7 @@ class ToggleSwitch extends HTMLElement {
 
   handleClick(e) {
     if (e.type === 'click') {
-      const event = new CustomEvent('toggle-dark-mode', {
+      const event = new CustomEvent('toggle-theme', {
         detail: { isChecked: this._isChecked },
         bubbles: true,
         composed: true,
@@ -49,8 +49,8 @@ class ToggleSwitch extends HTMLElement {
     </label>
     `
     this._root.replaceChildren(template.content.cloneNode(true))
-    this.toggleDarkMode = this._root.getElementById(`switch`)
-    this.toggleDarkMode.addEventListener('click', this.handleClick)
+    this.toggleSwitch = this._root.getElementById(`switch`)
+    this.toggleSwitch.addEventListener('click', this.handleClick)
   }
 
   get style() {
