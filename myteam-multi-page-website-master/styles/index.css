@@ -35,6 +35,8 @@
 
   --bg-color-primary: var(--color-midnight-green);
   --bg-color-secondary: var(--color-sacramento-state-green);
+  --bg-color-accent-primary: var(--color-light-coral);
+  --bg-color-accent-secondary: var(--color-rapture-blue);
   --bg-color-footer: var(--color-dark-green);
 
   --input-color: var(--color-neutral-dark-gray);
