@@ -45,12 +45,12 @@
 }
 
 body {
+  align-items: center;
+  background-color: var(--bg-color-primary);
+  color: var(--txt-color-primary);
   font-family: 'Livvic', sans-serif;
   font-size: var(--fs-500);
   font-weight: var(--fw-normal);
-  background-color: var(--bg-color-primary);
-  color: var(--txt-color-primary);
-  align-items: center;
 }
 
 .heading {
@@ -82,18 +82,20 @@ body {
 .paragraph {
   color: var(--txt-color-primary);
   font-size: var(--fs-510);
+  font-weight: var(--fw-semi-bold);
   line-height: var(--fs-575);
 }
 
 .paragraph-sm {
   color: var(--txt-color-primary);
   font-size: var(--fs-430);
+  font-weight: var(--fw-semi-bold);
   line-height: var(--fs-550);
 }
 
 .btn {
   background: none;
-  border: 1px solid var(--txt-color-primary);
+  border: 2px solid var(--txt-color-primary);
   color: var(--txt-color-primary);
   border-radius: 24px;
   height: 48px;
@@ -105,26 +107,27 @@ body {
 }
 
 .btn-dark {
-  color: var(--txt-color-secondary);
   border-color: var(--txt-color-secondary);
+  color: var(--txt-color-secondary);
 }
 .btn-dark:hover {
+  background-color: var(--bg-color-secondary);
   color: var(--txt-color-primary);
 }
 
 .btn-secondary {
-  color: var(--color-dark-green);
   background-color: var(--txt-color-primary);
   border-color: var(--txt-color-primary);
+  color: var(--color-dark-green);
 }
 .btn-secondary {
   background-color: var(--txt-color-accent-secondary);
 }
 
 .grid {
-  display: grid;
   align-items: center;
-  grid-template-columns: repeat(12, 4.5vw);
+  display: grid;
   gap: 30px;
+  grid-template-columns: repeat(12, 4.5vw);
   margin-inline: auto;
 }
