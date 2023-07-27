@@ -2,14 +2,14 @@
   margin-top: 72px;
 }
 .header__nav {
-  grid-column: span 6;
   display: flex;
   gap: 80px;
+  grid-column: span 6;
 }
 .header__list {
-  list-style: none;
-  gap: 40px;
   display: flex;
+  gap: 40px;
+  list-style: none;
 }
 .header__btn {
   grid-column: span 6;
@@ -17,34 +17,34 @@
 }
 
 .hero {
-  display: flex;
-  width: 100%;
-  padding-bottom: 250px;
   background-image: url(../images/bg-pattern-home-1.svg),
     url(../images/bg-pattern-home-2.svg);
   background-position: -100px, right 160px bottom;
   background-repeat: no-repeat;
+  display: flex;
   flex-direction: column;
+  padding-bottom: 250px;
+  width: 100%;
 }
 .hero__title {
-  margin-top: 125px;
   grid-column: span 6;
+  margin-top: 125px;
 }
 .hero__title span {
   color: var(--txt-color-accent-primary);
 }
 .hero__text {
-  grid-column: 8 / span 5;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   gap: 80px;
+  grid-column: 8 / span 5;
   padding-right: 20px;
 }
 .hero__text__decoration {
+  background-color: var(--bg-color-accent-secondary);
   height: 4px;
   width: 50px;
-  background-color: var(--bg-color-accent-secondary);
 }
 
 .features {
@@ -82,12 +82,59 @@
   color: var(--txt-color-accent-primary);
 }
 .features__list__item {
-  display: flex;
   align-items: flex-start;
+  display: flex;
   gap: 1.5rem;
 }
 .features__list__item__description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.testimonies {
+  align-items: center;
+  background-image: url(../images/bg-pattern-home-4-about-3.svg),
+    url(../images/bg-pattern-home-5.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  justify-content: center;
+  padding-bottom: 140px;
+  padding-top: 198px;
+  text-align: center;
+  width: 100%;
+}
+.testimonies h2 {
+  grid-column: 2 / span 10;
+  text-align: center;
+}
+.testimonies span {
+  color: var(--bg-color-accent-secondary);
+}
+.testimonies ul {
+  list-style: none;
+}
+.testimonies__list__item {
+  align-items: center;
+  background-image: url('../images/icon-quotes.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  grid-column: span 4;
+  padding-top: 36px;
+}
+.testimonies__list__item h3 {
+  color: var(--bg-color-accent-secondary);
+}
+
+.testimonies__list__item img {
+  border-radius: 100px;
+  border: 2px solid #c4fffe;
+  margin: 8px;
+  max-width: 62px;
 }
