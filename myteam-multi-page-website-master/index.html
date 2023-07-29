@@ -31,7 +31,7 @@
       <header class="grid header">
         <nav class="header__nav">
           <img src="./images/logo.svg" alt="logo " />
-          <ul class="header__list">
+          <ul class="header__list" role="list">
             <li class="sub-heading-sm">home</li>
             <li class="sub-heading-sm">about</li>
           </ul>
@@ -62,7 +62,7 @@
             Build & manage distributed teams like no one else.
           </h2>
         </div>
-        <ul class="features__list">
+        <ul class="features__list" role="list">
           <li class="features__list__item">
             <img src="./images/icon-person.svg" alt="icon person" />
             <div class="features__list__item__description">
@@ -104,7 +104,7 @@
           <span>success stories.</span>
         </h2>
       </div>
-      <ul class="grid">
+      <ul class="grid" role="list">
         <li class="testimonies__list__item">
           <p class="paragraph-sm">
             “The team perfectly fit the specialized skill set required. They
@@ -145,28 +145,35 @@
     </section>
     <!-- Testimonies -->
     <section class="started">
-      <div class="grid started__container">
+      <div class="grid">
         <h2 class="sub-heading-lg">Ready to get started?</h2>
         <button class="btn btn-dark paragraph">contact us</button>
       </div>
     </section>
     <footer>
-      <img src="logo" alt="logo" />
-      <nav>
-        <ul>
-          <li>home</li>
-          <li>about</li>
-        </ul>
-
-        <div class="icons"><i>facebook</i><i>pinterest</i><i>twitter</i></div>
-      </nav>
-      <div>
-        <p>987 Hillcrest Lane</p>
-        <p>Irvine, CA</p>
-        <p>California 92714</p>
-        <p>Call Us : 949-833-7432</p>
+      <div class="grid footer__container">
+        <nav class="footer__nav">
+          <img src="./images/logo.svg" alt="logo" />
+          <ul role="list">
+            <li class="sub-heading-sm">home</li>
+            <li class="sub-heading-sm">about</li>
+          </ul>
+        </nav>
+        <div class="footer__info">
+          <p class="paragraph-sm">987 Hillcrest Lane</p>
+          <p class="paragraph-sm">Irvine, CA</p>
+          <p class="paragraph-sm">California 92714</p>
+          <p class="paragraph-sm">Call Us : 949-833-7432</p>
+        </div>
+        <div class="icons">
+          <div>
+            <i class="icon facebook"></i>
+            <i class="icon pinterest"></i>
+            <i class="icon twitter"></i>
+          </div>
+          <p class="paragraph-sm">Copyright 2020. All Rights Reserved</p>
+        </div>
       </div>
-      <p>Copyright 2020. All Rights Reserved</p>
     </footer>
   </body>
 </html>

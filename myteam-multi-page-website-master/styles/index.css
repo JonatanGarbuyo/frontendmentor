@@ -130,4 +130,5 @@ body {
   gap: 30px;
   grid-template-columns: repeat(12, 4.5vw);
   margin-inline: auto;
+  width: fit-content;
 }
