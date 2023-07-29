@@ -148,7 +148,7 @@
   grid-column: 10 / span 2;
 }
 
-footer {
+.footer {
   padding-block: 48px;
   width: 100%;
   background-color: var(--bg-color-footer);
@@ -161,6 +161,7 @@ footer {
   display: flex;
   gap: 40px;
 }
+
 .footer__info {
   opacity: 0.6;
   grid-column: span 3;
@@ -190,6 +191,10 @@ footer {
   mask-size: cover;
   width: 24px;
   height: 24px;
+}
+
+.icon:hover {
+  background-color: var(--bg-color-accent-primary);
 }
 
 .facebook {
