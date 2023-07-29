@@ -63,7 +63,6 @@ body {
   font-size: var(--fs-900);
   line-height: var(--fs-900);
 }
-
 .heading-sm {
   font-size: var(--fs-800);
   line-height: var(--fs-750);
@@ -73,8 +72,8 @@ body {
   font-size: var(--fs-700);
   line-height: var(--fs-700);
 }
-
 .sub-heading-sm {
+  font-weight: var(--fw-semi-bold);
   font-size: var(--fs-510);
   line-height: var(--fs-575);
 }
@@ -85,7 +84,6 @@ body {
   font-weight: var(--fw-semi-bold);
   line-height: var(--fs-575);
 }
-
 .paragraph-sm {
   color: var(--txt-color-primary);
   font-size: var(--fs-430);
@@ -104,8 +102,8 @@ body {
 .btn:hover {
   background-color: var(--txt-color-primary);
   color: var(--txt-color-secondary);
+  cursor: pointer;
 }
-
 .btn-dark {
   border-color: var(--txt-color-secondary);
   color: var(--txt-color-secondary);
@@ -114,7 +112,6 @@ body {
   background-color: var(--bg-color-secondary);
   color: var(--txt-color-primary);
 }
-
 .btn-secondary {
   background-color: var(--txt-color-primary);
   border-color: var(--txt-color-primary);
@@ -131,4 +128,12 @@ body {
   grid-template-columns: repeat(12, 4.5vw);
   margin-inline: auto;
   width: fit-content;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.link:hover {
+  color: var(--bg-color-accent-primary);
 }
