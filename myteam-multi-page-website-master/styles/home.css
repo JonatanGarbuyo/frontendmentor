@@ -17,6 +17,43 @@
 
 .icon-hamburger {
   display: none;
+  background: none;
+  border: none;
+}
+.icon-hamburger:focus ~ .nav-mobile {
+  width: 255px;
+  right: 0px;
+}
+
+.nav-mobile {
+  overflow: hidden;
+  transition: width 0.5s ease, right 0.5s ease;
+  display: none;
+  background-color: var(--color-police-blue);
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  right: -255px;
+  top: 0;
+  background-image: url(../images/bg-pattern-about-1-mobile-nav-1.svg);
+  background-position: right -100px bottom;
+  background-repeat: no-repeat;
+}
+.close-icon {
+  position: absolute;
+  right: 24px;
+  top: 56px;
+}
+.nav-mobile__list {
+  margin-top: 112px;
+  margin-bottom: 36px;
+  margin-inline: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.nav-mobile__btn {
+  align-self: center;
 }
 
 .hero {
@@ -351,13 +388,15 @@
     margin-inline: 24px;
     justify-content: space-between;
   }
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 375px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    /* gap: unset; */
-    /* margin-inline: 24px; */
   }
 
   .heading-lg {

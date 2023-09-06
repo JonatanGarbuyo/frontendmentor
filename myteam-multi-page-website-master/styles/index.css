@@ -93,6 +93,10 @@ body {
 }
 
 .btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: 2px solid var(--txt-color-primary);
   color: var(--txt-color-primary);
