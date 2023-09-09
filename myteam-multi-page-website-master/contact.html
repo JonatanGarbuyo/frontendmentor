@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+
+    <title>Frontend Mentor | myteam website challenge - Contact</title>
+  </head>
+  <body>
+    <section class="hero">
+      <header class="grid header">
+        <nav class="header__nav">
+          <img src="./images/logo.svg" alt="logo " />
+          <ul class="header__list" role="list">
+            <li class="sub-heading-sm">
+              <a class="link" href="./index.html" rel="noopener noreferrer"
+                >home</a
+              >
+            </li>
+            <li class="sub-heading-sm">
+              <a class="link" href="./about.html" rel="noopener noreferrer"
+                >about</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="btn header__btn"
+          href="./contact.html"
+          rel="noopener noreferrer"
+          >contact us</a
+        >
+        <button class="icon-hamburger">
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="menu icon"
+            height="17"
+            width="20"
+          />
+        </button>
+        <div class="nav-mobile">
+          <img
+            class="close-icon"
+            src="./images/icon-close.svg"
+            alt="close icon"
+            width="18"
+            height="17"
+          />
+          <ul class="nav-mobile__list" role="list">
+            <li class="sub-heading-sm">
+              <a class="link" href="./index.html" rel="noopener noreferrer"
+                >home</a
+              >
+            </li>
+            <li class="sub-heading-sm">
+              <a class="link" href="./about.html" rel="noopener noreferrer"
+                >about</a
+              >
+            </li>
+          </ul>
+          <a
+            class="btn nav-mobile__btn"
+            href="./contact.html"
+            rel="noopener noreferrer"
+          >
+            contact us</a
+          >
+        </div>
+      </header>
+
+      <div class="grid hero_content">
+        <div class="hero__text">
+          <h1 class="heading-sm hero__title">Contact</h1>
+          <div class="hero__description">
+            <p class="heading sub-heading-lg hero__subtitle">Ask us about</p>
+            <ul class="paragraph us__list" role="list">
+              <li>
+                <img src="./images/icon-person.svg" alt="icon" />
+                <span class="sub-heading-sm"
+                  >The quality of our talent network</span
+                >
+              </li>
+              <li>
+                <img src="./images/icon-cog.svg" alt="icon" />
+                <span class="sub-heading-sm"
+                  >Usage & implementation of our software</span
+                >
+              </li>
+              <li>
+                <img src="./images/icon-chart.svg" alt="" />
+                <span class="sub-heading-sm">How we help drive innovation</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form paragraph-sm">
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
+          <div>
+            <input
+              class="form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <p class="error">This field is required</p>
+          </div>
+          <input
+            class="form__input"
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Company Name"
+          />
+
+          <input
+            class="form__input"
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+          />
+          <textarea
+            class="form__input textarea"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <button class="btn btn-secondary">submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="grid footer__container">
+        <nav class="footer__nav">
+          <div>
+            <img src="./images/logo.svg" alt="logo" />
+            <ul role="list">
+              <li class="sub-heading-sm">
+                <a class="link" href="./index.html" rel="noopener noreferrer"
+                  >home</a
+                >
+              </li>
+              <li class="sub-heading-sm">
+                <a class="link" href="./about.html" rel="noopener noreferrer"
+                  >about</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__info">
+            <p class="paragraph-sm">987 Hillcrest Lane</p>
+            <p class="paragraph-sm">Irvine, CA</p>
+            <p class="paragraph-sm">California 92714</p>
+            <p class="paragraph-sm">Call Us : 949-833-7432</p>
+          </div>
+        </nav>
+        <div class="icons">
+          <div>
+            <i class="icon facebook"></i>
+            <i class="icon pinterest"></i>
+            <i class="icon twitter"></i>
+          </div>
+          <p class="paragraph-sm">Copyright 2020. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
