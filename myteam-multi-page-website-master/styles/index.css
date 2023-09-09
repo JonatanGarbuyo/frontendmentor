@@ -135,7 +135,6 @@ body {
   gap: 30px;
   grid-template-columns: repeat(12, 1fr);
   margin-inline: 8.7vw;
-  /* width: fit-content; */
 }
 
 .link {
