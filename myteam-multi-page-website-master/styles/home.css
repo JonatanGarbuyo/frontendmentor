@@ -274,7 +274,7 @@
 
   .grid {
     gap: 10px;
-    margin-inline: auto;
+    margin-inline: 24px;
   }
 
   .header {
@@ -370,7 +370,7 @@
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 540px) {
   .header__list,
   .header__btn {
     display: none;
