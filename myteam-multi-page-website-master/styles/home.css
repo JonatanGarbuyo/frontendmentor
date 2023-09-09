@@ -341,7 +341,6 @@
   .footer__container {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding: 40px;
     gap: 32px;
   }
