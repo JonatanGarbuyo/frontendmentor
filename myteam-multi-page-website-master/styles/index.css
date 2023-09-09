@@ -125,8 +125,9 @@ body {
   border-color: var(--txt-color-primary);
   color: var(--color-dark-green);
 }
-.btn-secondary {
-  background-color: var(--txt-color-accent-secondary);
+.btn-secondary:hover {
+  background-color: var(--bg-color-accent-secondary);
+  border-color: var(--bg-color-accent-secondary);
 }
 
 .grid {

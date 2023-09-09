@@ -256,6 +256,15 @@
 
 /* Media queries */
 
+@media (max-width: 860px) {
+  .footer__nav {
+    grid-column: span 7;
+  }
+  .icons {
+    grid-column: span 5;
+  }
+}
+
 @media (max-width: 768px) {
   .heading-lg {
     font-size: var(--fs-800);
@@ -274,7 +283,7 @@
 
   .grid {
     gap: 10px;
-    margin-inline: 24px;
+    margin-inline: 40px;
   }
 
   .header {
@@ -343,6 +352,7 @@
     flex-direction: column;
     padding: 40px;
     gap: 32px;
+    padding-inline: 0;
   }
 
   .footer__nav img {
@@ -369,7 +379,7 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 560px) {
   .header__list,
   .header__btn {
     display: none;
@@ -396,6 +406,7 @@
 @media (max-width: 375px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
+    margin-inline: 24px;
   }
 
   .heading-lg {
