@@ -49,6 +49,9 @@
 .form button {
   width: 123px;
 }
+.form label {
+  position: relative;
+}
 
 .form__input {
   color: var(--txt-color-primary);
@@ -73,20 +76,24 @@
   line-height: var(--fs-550);
 }
 
-.form__input:invalid:not(:placeholder-shown) {
+.input-error {
   border-color: var(--bg-color-accent-primary);
 }
-.form__input:invalid:not(:placeholder-shown) ~ .error {
-  display: block;
-  position: block;
+.input-error::placeholder {
+  color: var(--txt-color-accent-primary);
 }
 
-.error {
-  margin-top: 8px;
+.error-message {
+  opacity: 60%;
+  position: absolute;
+  /* margin-top: 8px; */
   padding-inline: 14px;
   font-size: 10px;
   display: none;
   color: var(--txt-color-accent-primary);
+}
+.show-error {
+  display: block;
 }
 
 .textarea {
