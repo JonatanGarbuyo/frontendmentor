@@ -1,0 +1,145 @@
+.hero {
+  background-image: url('../images/bg-pattern-about-2-contact-1.svg'),
+    url('../images/bg-pattern-contact-2.svg');
+  background-position: left -100px top 245px, right -100px bottom;
+
+  padding-bottom: 120px;
+}
+.hero_content {
+  padding-block: 120px;
+}
+
+.hero__text {
+  grid-column: span 6;
+  gap: 16px;
+}
+
+.hero__title {
+  margin-top: 0px;
+  line-height: 100px;
+}
+
+.hero__description {
+  margin-top: 16px;
+}
+.hero__subtitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--txt-color-accent-primary);
+}
+
+.us__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.us__list li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.form {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form button {
+  width: 123px;
+}
+.form label {
+  position: relative;
+}
+
+.form__input {
+  color: var(--txt-color-primary);
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  height: 42px;
+  padding-bottom: 17px;
+  padding-inline: 14px;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.form__input::placeholder {
+  opacity: 60%;
+  color: var(--txt-color-primary);
+  font-size: var(--fs-430);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--fs-550);
+}
+
+.input-error {
+  border-color: var(--bg-color-accent-primary);
+}
+.input-error::placeholder {
+  color: var(--txt-color-accent-primary);
+}
+
+.error-message {
+  opacity: 60%;
+  position: absolute;
+  /* margin-top: 8px; */
+  padding-inline: 14px;
+  font-size: 10px;
+  display: none;
+  color: var(--txt-color-accent-primary);
+}
+.show-error {
+  display: block;
+}
+
+.textarea {
+  height: 84px;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 0;
+  }
+  .hero__text {
+    gap: 0;
+  }
+  .hero_content {
+    padding-block: 112px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .hero__title {
+    margin-bottom: 0;
+  }
+  .hero__subtitle {
+    text-align: center;
+  }
+
+  .hero__text,
+  .form {
+    width: 100%;
+    max-width: 515px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    background-image: url('../images/bg-pattern-contact-2.svg');
+    background-position: right -112.5px bottom -112.5px;
+  }
+  .hero_content {
+    padding-top: 64px;
+    padding-bottom: 88px;
+  }
+  .hero__title {
+    font-size: var(--fs-650);
+  }
+}

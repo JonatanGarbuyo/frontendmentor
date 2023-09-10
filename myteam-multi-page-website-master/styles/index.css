@@ -1,0 +1,147 @@
+:root {
+  /* Primary */
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-coral: hsl(0, 87%, 73%);
+  --color-midnight-green: hsl(186, 98%, 17%);
+  /* Secondary */
+  --color-rapture-blue: hsl(179, 42%, 63%);
+  --color-police-blue: hsl(187, 41%, 29%);
+  --color-deep-jungle-green: hsl(186, 100%, 14%);
+  --color-sacramento-state-green: hsl(186, 96%, 10%);
+  --color-dark-green: hsl(186, 100%, 8%);
+
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-300: 0.75rem;
+  --fs-430: 0.9375rem;
+  --fs-500: 1rem;
+  --fs-510: 1.125rem;
+  --fs-550: 1.5625rem;
+  --fs-575: 1.75rem;
+  --fs-600: 2rem;
+  --fs-650: 2.5rem;
+  --fs-700: 3rem;
+  --fs-730: 3.375rem;
+  --fs-750: 3.5rem;
+  --fs-800: 4rem;
+  --fs-900: 6.25rem;
+
+  --txt-color-primary: var(--color-white);
+  --txt-color-secondary: var(--color-sacramento-state-green);
+
+  --txt-color-accent-primary: var(--color-light-coral);
+  --txt-color-accent-secondary: var(--color-rapture-blue);
+
+  --bg-color-primary: var(--color-midnight-green);
+  --bg-color-secondary: var(--color-sacramento-state-green);
+  --bg-color-accent-primary: var(--color-light-coral);
+  --bg-color-accent-secondary: var(--color-rapture-blue);
+  --bg-color-footer: var(--color-dark-green);
+
+  --input-color: var(--color-neutral-dark-gray);
+
+  --box-shadow: var(--color-neutral-light-gray);
+}
+
+body {
+  align-items: center;
+  background-color: var(--bg-color-primary);
+  color: var(--txt-color-primary);
+  font-family: 'Livvic', sans-serif;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-normal);
+}
+
+.heading {
+  color: var(--txt-color-primary);
+  font-weight: var(--fw-bold);
+  text-align: left;
+}
+
+.heading-lg {
+  font-size: var(--fs-900);
+  line-height: var(--fs-900);
+}
+.heading-sm {
+  font-size: var(--fs-800);
+  line-height: var(--fs-750);
+}
+
+.sub-heading-lg {
+  font-size: var(--fs-700);
+  line-height: var(--fs-700);
+}
+.sub-heading-sm {
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-510);
+  line-height: var(--fs-575);
+}
+
+.paragraph {
+  color: var(--txt-color-primary);
+  font-size: var(--fs-510);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--fs-575);
+}
+.paragraph-sm {
+  color: var(--txt-color-primary);
+  font-size: var(--fs-430);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--fs-550);
+}
+
+.btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 2px solid var(--txt-color-primary);
+  color: var(--txt-color-primary);
+  border-radius: 24px;
+  height: 48px;
+  width: 153px;
+  font-size: var(--fs-510);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--fs-575);
+}
+.btn:hover {
+  background-color: var(--txt-color-primary);
+  color: var(--txt-color-secondary);
+  cursor: pointer;
+}
+.btn-dark {
+  border-color: var(--txt-color-secondary);
+  color: var(--txt-color-secondary);
+}
+.btn-dark:hover {
+  background-color: var(--bg-color-secondary);
+  color: var(--txt-color-primary);
+}
+.btn-secondary {
+  background-color: var(--txt-color-primary);
+  border-color: var(--txt-color-primary);
+  color: var(--color-dark-green);
+}
+.btn-secondary:hover {
+  background-color: var(--bg-color-accent-secondary);
+  border-color: var(--bg-color-accent-secondary);
+}
+
+.grid {
+  align-items: center;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  margin-inline: 8.7vw;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.link:hover {
+  color: var(--bg-color-accent-primary);
+}

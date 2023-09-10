@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+
+    <title>Frontend Mentor | myteam website challenge - Homepage</title>
+  </head>
+  <body>
+    <section class="hero">
+      <header class="grid header">
+        <nav class="header__nav">
+          <img src="./images/logo.svg" alt="logo " />
+          <ul class="header__list" role="list">
+            <li class="sub-heading-sm">
+              <a class="link" href="./index.html" rel="noopener noreferrer"
+                >home</a
+              >
+            </li>
+            <li class="sub-heading-sm">
+              <a class="link" href="./about.html" rel="noopener noreferrer"
+                >about</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="btn header__btn"
+          href="./contact.html"
+          rel="noopener noreferrer"
+          >contact us</a
+        >
+        <button class="icon-hamburger">
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="menu icon"
+            height="17"
+            width="20"
+          />
+        </button>
+        <div class="nav-mobile">
+          <img
+            class="close-icon"
+            src="./images/icon-close.svg"
+            alt="close icon"
+            width="18"
+            height="17"
+          />
+          <ul class="nav-mobile__list" role="list">
+            <li class="sub-heading-sm">
+              <a class="link" href="./index.html" rel="noopener noreferrer"
+                >home</a
+              >
+            </li>
+            <li class="sub-heading-sm">
+              <a class="link" href="./about.html" rel="noopener noreferrer"
+                >about</a
+              >
+            </li>
+          </ul>
+          <a
+            class="btn nav-mobile__btn"
+            href="./contact.html"
+            rel="noopener noreferrer"
+          >
+            contact us</a
+          >
+        </div>
+      </header>
+      <div class="grid hero_content">
+        <h1 class="heading-lg hero__title">
+          Find the best <span>talent</span>
+        </h1>
+        <div class="hero__text">
+          <div class="hero__text__decoration"></div>
+          <p class="paragraph">
+            Finding the right people and building high performing teams can be
+            hard. Most companies aren't tapping into the abundance of global
+            talent. We're about to change that.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- hero -->
+
+    <section class="features">
+      <div class="grid features__container">
+        <div class="features__title">
+          <div class="features__title__decoration"></div>
+          <h2 class="sub-heading-lg">
+            Build & manage distributed teams like no one else.
+          </h2>
+        </div>
+        <ul class="features__list" role="list">
+          <li class="features__list__item">
+            <img src="./images/icon-person.svg" alt="icon person" />
+            <div class="features__list__item__description">
+              <h3 class="sub-heading-sm">Experienced Individuals</h3>
+              <p class="paragraph-sm">
+                Our network is made up of highly experienced professionals who
+                are passionate about what they do.
+              </p>
+            </div>
+          </li>
+          <li class="features__list__item">
+            <img src="./images/icon-cog.svg" alt="icon cog" />
+            <div class="features__list__item__description">
+              <h3 class="sub-heading-sm">Easy to Implement</h3>
+              <p class="paragraph-sm">
+                Our processes have been refined over years of implementation
+                meaning our teams always deliver.
+              </p>
+            </div>
+          </li>
+          <li class="features__list__item">
+            <img src="./images/icon-chart.svg" alt="icon chart" />
+            <div class="features__list__item__description">
+              <h3 class="sub-heading-sm">Enhanced Productivity</h3>
+              <p class="paragraph-sm">
+                Our customized platform with in-built analytics helps you manage
+                your distributed teams.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Features -->
+    <section class="testimonies">
+      <div class="grid">
+        <h2 class="sub-heading-lg">
+          Delivering real results for top companies. Some of our
+          <span>success stories.</span>
+        </h2>
+      </div>
+      <ul class="grid" role="list">
+        <li class="testimonies__list__item">
+          <p class="paragraph-sm">
+            “The team perfectly fit the specialized skill set required. They
+            focused on the most essential features helping us launch the
+            platform eight months faster than planned.”
+          </p>
+          <div>
+            <h3 class="sub-heading-sm">Kady Baker</h3>
+            <p>Product Manager at Bookmark</p>
+          </div>
+          <img src="./images/avatar-kady.jpg" alt="Kady Baker" />
+        </li>
+        <li class="testimonies__list__item">
+          <p class="paragraph-sm">
+            “We needed to automate our entire onboarding process. The team came
+            in and built out the whole journey. Since going live, user retention
+            has gone through the roof!”
+          </p>
+          <div>
+            <h3 class="sub-heading-sm">Aiysha Reese</h3>
+            <p>Founder of Manage</p>
+          </div>
+          <img src="./images/avatar-aiysha.jpg" alt="Aiysha Reese" />
+        </li>
+        <li class="testimonies__list__item">
+          <p class="paragraph-sm">
+            “Amazing. Our team helped us build an app that delivered a new
+            experience for hiring a physio. The launch was an instant success
+            with 100k downloads in the first month.”
+          </p>
+          <div>
+            <h3 class="sub-heading-sm">Arthur Clarke</h3>
+            <p>Co-founder of MyPhysio</p>
+          </div>
+          <img src="./images/avatar-arthur.jpg" alt="Arthur Clarke" />
+        </li>
+      </ul>
+    </section>
+    <!-- Testimonies -->
+    <section class="started">
+      <div class="grid">
+        <div class="started__container">
+          <h2 class="sub-heading-lg">Ready to get started?</h2>
+          <a
+            class="btn btn-dark"
+            href="./contact.html"
+            rel="noopener noreferrer"
+            >contact us</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="grid footer__container">
+        <nav class="footer__nav">
+          <div>
+            <img src="./images/logo.svg" alt="logo" />
+            <ul role="list">
+              <li class="sub-heading-sm">
+                <a class="link" href="./index.html" rel="noopener noreferrer"
+                  >home</a
+                >
+              </li>
+              <li class="sub-heading-sm">
+                <a class="link" href="./about.html" rel="noopener noreferrer"
+                  >about</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__info">
+            <p class="paragraph-sm">987 Hillcrest Lane</p>
+            <p class="paragraph-sm">Irvine, CA</p>
+            <p class="paragraph-sm">California 92714</p>
+            <p class="paragraph-sm">Call Us : 949-833-7432</p>
+          </div>
+        </nav>
+        <div class="icons">
+          <div>
+            <i class="icon facebook"></i>
+            <i class="icon pinterest"></i>
+            <i class="icon twitter"></i>
+          </div>
+          <p class="paragraph-sm">Copyright 2020. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
