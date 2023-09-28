@@ -1,0 +1,111 @@
+.header {
+  width: 100%;
+}
+
+.header__container {
+  align-items: flex-end;
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.header__list {
+  display: flex;
+  gap: 44px;
+}
+
+/* Hero */
+.hero__content {
+  background-color: var(--bg-color-primary);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  height: 357px;
+  justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  width: 445px;
+}
+
+.hero__title {
+  max-width: 396px;
+}
+
+/* About Me */
+.about-me {
+  display: flex;
+  gap: 125px;
+  margin-top: 150px;
+}
+
+.about-me img {
+  max-width: 540px;
+}
+
+.about-me__description {
+  align-items: flex-start;
+  border: 1px solid var(--color-light-gray);
+  border-inline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: center;
+  max-width: 355px;
+}
+
+.about-me__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Contact Me */
+.contact-me {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  margin-block: 150px;
+}
+
+.contact-me__title {
+  max-width: 350px;
+}
+
+.separator {
+  border-bottom: 1px solid #d9d9d9;
+  flex-grow: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-color-secondary);
+  color: var(--txt-color-secondary);
+  width: 100%;
+}
+
+.footer__container {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.footer__navigation {
+  align-items: center;
+  display: flex;
+  gap: 49px;
+}
+
+.navigation ul {
+  color: var(--txt-color-secondary);
+  display: flex;
+  gap: 41px;
+}
+
+.icons {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}
