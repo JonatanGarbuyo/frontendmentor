@@ -1,7 +1,7 @@
 :root {
   /* Primary */
   --color-primary: #33323d;
-  --color-dark-blue: #2a3a4b;
+  --color-dark-blue: #203a4c;
   /* Neutral */
   --color-white: #fff;
   --color-light-gray: #e6e6e6;
@@ -198,4 +198,16 @@ body {
 }
 .link:hover {
   color: var(--bg-color-accent-primary);
+}
+
+.hamburger {
+  background: none;
+  background-image: url('../images/icons/hamburger.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  display: none;
+  height: 24px;
+  transition: background-image 0.2s ease;
+  width: 24px;
 }
