@@ -85,41 +85,6 @@
   flex-grow: 1;
 }
 
-/* Footer */
-.footer {
-  background-color: var(--bg-color-secondary);
-  color: var(--txt-color-secondary);
-  padding-inline: calc(7.5%);
-  width: 100%;
-}
-
-.footer__container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-block: 32px;
-}
-
-.footer__navigation {
-  align-items: center;
-  display: flex;
-  gap: 49px;
-  margin: 24px;
-}
-
-.navigation ul {
-  color: var(--txt-color-secondary);
-  display: flex;
-  gap: 41px;
-}
-
-.icons {
-  align-items: center;
-  display: flex;
-  gap: 15px;
-  margin-block: 24px;
-}
-
 /* Media Queries */
 @media (max-width: 1024px) {
   .about-me {

@@ -41,7 +41,7 @@ body {
 
 body {
   min-width: 375px;
-  min-height: 100vh;
+  min-height: 100dvh;
   text-rendering: optimizeSpeed;
   display: flex;
   flex-flow: column;
