@@ -166,13 +166,14 @@ body {
   background-color: var(--bg-color-accent-primary);
   border: 1px solid var(--bg-color-accent-primary);
 }
-.btn-primary::after {
+
+.btn-about::after {
   content: 'About Me';
   flex-grow: 1;
   text-align: center;
   width: 152px;
 }
-.btn-primary::before {
+.btn-about::before {
   background-color: rgb(0, 0, 0, 0.1);
   background-image: url(../images/icons/down-arrows.svg);
   background-position: center;
