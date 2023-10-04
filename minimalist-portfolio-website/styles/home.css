@@ -63,28 +63,6 @@
   gap: 24px;
 }
 
-/* Contact Me */
-#contact-me {
-  padding-inline: calc(7.5%);
-  width: 100%;
-}
-
-.contact-me {
-  align-items: center;
-  display: flex;
-  gap: 32px;
-  margin-block: 150px;
-}
-
-.contact-me__title {
-  max-width: 350px;
-}
-
-.separator {
-  border-bottom: 1px solid #d9d9d9;
-  flex-grow: 1;
-}
-
 /* Media Queries */
 @media (max-width: 1024px) {
   .about-me {
@@ -112,14 +90,9 @@
   .about-me__description {
     max-width: unset;
   }
-
-  .contact-me {
-    flex-direction: column;
-    margin-block: 96px;
-  }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 490px) {
   .about-me__img img {
     max-width: 100%;
   }

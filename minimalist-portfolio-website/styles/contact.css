@@ -93,17 +93,9 @@ label {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 490px) {
   .contact-me {
-    gap: 24px;
-    margin-bottom: 0;
     margin-top: 1rem;
-    padding-bottom: 20px;
     padding-top: 24px;
-  }
-  .form-section {
-    gap: 24px;
-    grid-template-columns: auto;
-    margin-block: 32px;
   }
 }
