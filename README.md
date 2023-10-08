@@ -370,9 +370,9 @@ If you've never built a multi-page website you should learn loads by completing 
 
 [![Design preview for the Minimalist portfolio website challenge](https://res.cloudinary.com/practicaldev/image/fetch/s--UXUIdClZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/d5ga5zdv3nyw9y8hvoty.jpg)](https://res.cloudinary.com/practicaldev/image/fetch/s--UXUIdClZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/d5ga5zdv3nyw9y8hvoty.jpg)
 
-| Requirements  | Difficulty   | Type    | URL                                                                                             |
-| ------------- | ------------ | ------- | ----------------------------------------------------------------------------------------------- |
-| HTML, CSS, JS | Intermediate | Premium | [View Project](https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE) |
+| Requirements  | Difficulty   | Type    | URL                                                                                                     |
+| ------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------------- |
+| HTML, CSS, JS | Intermediate | Premium | [View Project](https://github.com/JonatanGarbuyo/frontendmentor/tree/main/minimalist-portfolio-website) |
 
 If you've got this far then you're definitely going to need a great looking portfolio site to show off your hard work! That's exactly what you can use this challenge for. Build it to the design and then customise it to make it your own.
 
