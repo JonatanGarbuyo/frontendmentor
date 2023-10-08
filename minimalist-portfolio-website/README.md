@@ -1,5 +1,7 @@
 # Frontend Mentor - Minimalist portfolio website solution
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b4d77336-eb44-4ac9-82f1-3565586bcf4e/deploy-status)](https://app.netlify.com/sites/scintillating-malabi-add4bf/deploys)
+
 This is a solution to the [Minimalist portfolio website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -34,8 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [myteam-multi-page-website](https://github.com/JonatanGarbuyo/frontendmentor/tree/main/myteam-multi-page-website-master)
-- Live Site URL: [myteam-multi-page-website-master.netlify.app](https://myteam-multi-page-website-master.netlify.app/)
+- Live Site URL: [minimalist-portfolio-website-fm.netlify.app](https://minimalist-portfolio-website-fm.netlify.app/)
 
 ## My process
 
