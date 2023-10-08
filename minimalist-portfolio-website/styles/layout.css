@@ -121,19 +121,24 @@ main {
   font-size: var(--fs-650);
   line-height: 110%;
 }
+.sub-heading-sm {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-600);
+  line-height: 110%;
+}
 
 .paragraph {
   color: var(--txt-color-primary);
   font-size: var(--fs-500);
   font-weight: var(--fw-medium);
-  line-height: calc(var(--fs-500) * 1.9);
+  line-height: 190%;
 }
 
 .paragraph-md {
   color: var(--txt-color-primary);
   font-size: var(--fs-450);
   font-weight: var(--fw-medium);
-  line-height: calc(var(--fs-450) * 2);
+  line-height: 200%;
 }
 
 .paragraph-sm {
@@ -216,6 +221,10 @@ main {
   color: var(--bg-color-accent-primary);
 }
 
+.accent {
+  color: var(--txt-color-accent-primary);
+}
+
 .hamburger {
   background: none;
   background-image: url('../images/icons/hamburger.svg');
@@ -263,6 +272,7 @@ main {
 
 .contact-me__title {
   max-width: 350px;
+  text-align: center;
 }
 
 .separator {
@@ -305,13 +315,14 @@ main {
 }
 
 /* Media Queries */
+@media (max-width: 810px) {
+  .header__container {
+    height: 106px;
+  }
+}
 @media (max-width: 640px) {
   .heading {
     font-size: var(--fs-650);
-  }
-
-  .header__container {
-    height: 106px;
   }
 
   .contact-me {
