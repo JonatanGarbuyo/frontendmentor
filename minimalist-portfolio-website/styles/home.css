@@ -1,21 +1,10 @@
-.header {
+/* Home */
+.hero {
+  padding-inline: calc(7.5%);
+  position: relative;
   width: 100%;
 }
 
-.header__container {
-  align-items: flex-end;
-  display: flex;
-  height: 120px;
-  justify-content: space-between;
-  margin-bottom: 26px;
-}
-
-.header__list {
-  display: flex;
-  gap: 44px;
-}
-
-/* Hero */
 .hero__content {
   background-color: var(--bg-color-primary);
   bottom: 0;
@@ -34,14 +23,26 @@
 }
 
 /* About Me */
+#about-me {
+  padding-inline: calc(7.5%);
+  width: 100%;
+}
+
 .about-me {
   display: flex;
   gap: 125px;
+  justify-content: space-between;
   margin-top: 150px;
 }
 
-.about-me img {
-  max-width: 540px;
+.about-me__img {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  width: 100%;
+}
+.about-me__img img {
+  max-width: unset;
 }
 
 .about-me__description {
@@ -53,6 +54,7 @@
   gap: 28px;
   justify-content: center;
   max-width: 355px;
+  padding-block: 48px;
 }
 
 .about-me__text {
@@ -61,51 +63,37 @@
   gap: 24px;
 }
 
-/* Contact Me */
-.contact-me {
-  align-items: center;
-  display: flex;
-  gap: 32px;
-  margin-block: 150px;
+/* Media Queries */
+@media (max-width: 1024px) {
+  .about-me {
+    gap: 68px;
+    margin-top: 96px;
+  }
+
+  .about-me__description {
+    max-width: 340px;
+  }
 }
 
-.contact-me__title {
-  max-width: 350px;
+@media (max-width: 640px) {
+  .hero__content {
+    height: 258px;
+    margin-top: 19px;
+    position: relative;
+    width: unset;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+
+  .about-me__description {
+    max-width: unset;
+  }
 }
 
-.separator {
-  border-bottom: 1px solid #d9d9d9;
-  flex-grow: 1;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--bg-color-secondary);
-  color: var(--txt-color-secondary);
-  width: 100%;
-}
-
-.footer__container {
-  align-items: center;
-  display: flex;
-  height: 80px;
-  justify-content: space-between;
-}
-
-.footer__navigation {
-  align-items: center;
-  display: flex;
-  gap: 49px;
-}
-
-.navigation ul {
-  color: var(--txt-color-secondary);
-  display: flex;
-  gap: 41px;
-}
-
-.icons {
-  align-items: center;
-  display: flex;
-  gap: 15px;
+@media (max-width: 490px) {
+  .about-me__img img {
+    max-width: 100%;
+  }
 }

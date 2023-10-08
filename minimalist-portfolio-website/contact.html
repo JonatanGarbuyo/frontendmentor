@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Jonatan Garbuyo" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+
+    <script src="./app.js" type="module" defer></script>
+    <title>Frontend Mentor | Contact Me</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <img class="logo header__image" src="./images/logo.svg" alt="logo" />
+        <button class="hamburger"></button>
+        <nav class="menu">
+          <ul class="txt-menu header__list" role="list">
+            <li><a class="link" href="./index.html">Home</a></li>
+            <li><a class="link" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="link" href="./contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container contact-me">
+        <h1 class="heading sub-heading">Get in Touch</h1>
+        <div class="contact-me__description">
+          <p class="paragraph">
+            I’d love to hear about what you’re working on and how I could help.
+            I’m currently looking for a new role and am open to a wide range of
+            opportunities. My preference would be to find a position in a
+            company in London. But I’m also happy to hear about opportunites
+            that don’t fit that description. I’m a hard-working and positive
+            person who will always approach each task with a sense of purpose
+            and attention to detail. Please do feel free to check out my online
+            profiles below and get in touch using the form.
+          </p>
+          <div class="icons">
+            <i class="icon icon-dark github"></i>
+            <i class="icon icon-dark twitter"></i>
+            <i class="icon icon-dark linkedin"></i>
+          </div>
+        </div>
+      </div>
+
+      <section class="form-section">
+        <h2 class="heading sub-heading">Contact Me</h2>
+
+        <form class="contact-form">
+          <label class="paragraph-sm" for="name">
+            Name
+            <input
+              class="form__input"
+              required
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Jane Appleseed"
+            />
+            <p class="error-message">This field is required</p>
+          </label>
+
+          <label class="paragraph-sm" for="email"
+            >Email Address
+            <input
+              class="form__input"
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@example.com"
+            />
+            <p class="error-message">This field is required</p>
+          </label>
+
+          <label class="paragraph-sm" for="message">
+            Message
+            <textarea
+              class="form__input textarea"
+              required
+              name="message"
+              id="message"
+              placeholder="How can I help?"
+            ></textarea>
+            <p class="error-message">This field is required</p>
+          </label>
+
+          <button class="btn btn-primary form__button">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__navigation">
+          <i class="logo footer-logo"></i>
+          <nav class="navigation">
+            <ul role="list" class="txt-menu">
+              <li><a class="link" href="./index.html">Home</a></li>
+              <li><a class="link" href="./portfolio.html">Portfolio</a></li>
+              <li><a class="link" href="./contact.html">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="icons">
+          <i class="icon github"></i>
+          <i class="icon twitter"></i>
+          <i class="icon linkedin"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
