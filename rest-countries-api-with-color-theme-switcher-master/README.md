@@ -1,6 +1,5 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/32dc84b4-3465-4a23-90ed-770585865389/deploy-status)](https://app.netlify.com/sites/rest-countries-api-with-color-theme-f/deploys)
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -35,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github](https://github.com/JonatanGarbuyo/frontendmentor/tree/main/rest-countries-api-with-color-theme-switcher-master)
-- Live Site URL: [netlify](https://rest-countries-api-with-color-theme-f.netlify.app/name/Canada)
+- Live Site URL: [clouflare](https://rest-countries-api-with-color-theme-switcher.pages.dev/)
 
 ## My process
 
